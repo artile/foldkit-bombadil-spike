@@ -130,6 +130,8 @@ Keep discovery separate from throughput. Bombadil explores a browser using cover
 
 Browser useful time includes Bombadil instrumentation, state extraction, screenshots, browser input, rendering and Command/runtime work. Direct actions also wait for bridge acknowledgement and view convergence. Warm headless timing includes pure update, its Command interpreter and the same model oracle. It excludes browser startup and all browser/platform behavior. It is useful for deciding which checks belong at which layer, not for a blanket “faster/better” claim.
 
+The bridge waits for the rendered Model snapshot to converge; this does not prove that every visible label or list is correct. Scene tests and the wiring control cover selected UI behavior.
+
 No Chrome-tree CPU/RSS, energy, dollar cost or authoring-time claims are made. Hegel was not evaluated. See the report for repeat counts, ranges, detection denominators, trigger coverage, shrink results, replay failures and limits.
 
 ## Sources
