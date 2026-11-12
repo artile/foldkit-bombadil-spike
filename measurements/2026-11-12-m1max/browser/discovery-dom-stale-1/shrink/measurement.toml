@@ -1,0 +1,9 @@
+kind = "shrink"
+exit = 0
+timed_out = false
+elapsed_ms = 20296.76524999994
+started_at_ms = 1794504120684
+before_actions = 13
+after_actions = 13
+retained_violation = true
+status = "trace-produced"

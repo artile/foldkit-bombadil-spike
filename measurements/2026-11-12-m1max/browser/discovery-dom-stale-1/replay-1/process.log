@@ -1,0 +1,134 @@
+00:00.000 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.322 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.473 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.551 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.685 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.818 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.947 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.098 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.221 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.334 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.414 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.572 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.714 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:01.911:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 2
+    next: 2
+    search-a: 1
+    search-all: 5
+    search-b: 2
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 8
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 2
+    no_duplicate_pending: 3
+    page_data_matches: 1
+    response_matches_pending: 1
+    stale_ignored: 1
+  firstViolationMessage: 11
+  messages: 11
+  model: 
+    activeId: 8
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 2
+        page: 1
+        query: b
+      - 
+        id: 3
+        page: 2
+        query: b
+      - 
+        id: 4
+        page: 1
+        query: ""
+      - 
+        id: 5
+        page: 1
+        query: b
+      - 
+        id: 6
+        page: 1
+        query: ""
+      - 
+        id: 7
+        page: 1
+        query: a
+      - 
+        id: 8
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Blue bowl
+          - Cedar table
+          - Copper clock
+        request: 
+          id: 1
+          page: 2
+          query: ""
+        total: 12
+    sequence: 8
+  readyIds: 
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+  semanticActions: 13
+  tags: 
+    ClickedPage: 2
+    SucceededFetchPage: 1
+    UpdatedQuery: 8
+  tick: 2
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-stale-1/replay-1
+

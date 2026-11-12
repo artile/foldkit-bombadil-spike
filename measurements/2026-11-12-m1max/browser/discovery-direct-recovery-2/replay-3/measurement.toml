@@ -1,0 +1,8 @@
+kind = "replay"
+exit = 2
+timed_out = false
+elapsed_ms = 11340.527207999956
+started_at_ms = 1794504109336
+reproduced = true
+violations = ["dialog_recovers"]
+actions = 73

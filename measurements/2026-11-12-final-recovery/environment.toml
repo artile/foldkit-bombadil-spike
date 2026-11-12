@@ -1,0 +1,4 @@
+source_commit = "24dd9ceee7896f20702c54919e53753b4f30b21d"
+purpose = "Post-measurement Dialog panel CSS repair: deterministic clean and recovery-mutant regression checks; not throughput samples"
+trace = ["refresh", "delay", "fail-newest", "dismiss"]
+limit_seconds = 15

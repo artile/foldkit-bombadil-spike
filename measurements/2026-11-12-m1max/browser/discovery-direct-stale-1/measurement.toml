@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "direct"
+mutant = "stale"
+repeat = 1
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=stale", "spec/direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-direct-stale-1"]
+exit = 2
+timed_out = false
+elapsed_ms = 7507.133708000001
+started_at_ms = 1794503375046
+states = 33
+actions = 32
+semantic_actions = 32
+messages = 29
+startup_to_first_snapshot_ms = 3126.611083984375
+useful_ms = 4274.207
+actions_per_useful_second = 7.48676889069715
+states_per_useful_second = 7.720730418531437
+messages_per_useful_second = 6.784884307194293
+first_violation_useful_ms = 4274.207
+first_violation_actions = 32
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 32
+commands = 19
+firstViolationMessage = 29
+violations = ["stale_ignored", "page_data_matches"]
+coverage = { "response_matches_pending" = 9, "stale_ignored" = 8, "no_duplicate_pending" = 10, "dialog_recovers" = 0, "page_data_matches" = 2, "dom_wiring" = 0 }
+actionCoverage = { "refresh" = 2, "next" = 5, "search-all" = 6, "search-b" = 4, "delay" = 3, "fail-oldest" = 5, "fail-newest" = 2, "success-newest" = 1, "search-a" = 3, "success-oldest" = 1 }
+model = { "query" = "a", "page" = 1, "sequence" = 19, "activeId" = 19, "pending" = [{ "id" = 9, "query" = "", "page" = 1 }, { "id" = 11, "query" = "", "page" = 1 }, { "id" = 12, "query" = "", "page" = 2 }, { "id" = 13, "query" = "a", "page" = 1 }, { "id" = 14, "query" = "", "page" = 1 }, { "id" = 15, "query" = "b", "page" = 1 }, { "id" = 16, "query" = "b", "page" = 2 }, { "id" = 17, "query" = "a", "page" = 1 }, { "id" = 18, "query" = "", "page" = 1 }, { "id" = 19, "query" = "a", "page" = 1 }], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 8, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

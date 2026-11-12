@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "direct"
+mutant = "clean"
+repeat = 1
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-direct-clean-1"]
+exit = 0
+timed_out = false
+elapsed_ms = 15123.219749999997
+started_at_ms = 1794503354964
+states = 84
+actions = 83
+semantic_actions = 83
+messages = 78
+startup_to_first_snapshot_ms = 2877.405029296875
+useful_ms = 12195.674
+actions_per_useful_second = 6.805691919938168
+states_per_useful_second = 6.887688208130194
+messages_per_useful_second = 6.395710478978037
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 83
+commands = 37
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 25, "stale_ignored" = 22, "no_duplicate_pending" = 31, "dialog_recovers" = 2, "page_data_matches" = 2, "dom_wiring" = 0 }
+actionCoverage = { "delay" = 9, "search-all" = 10, "next" = 11, "search-a" = 15, "search-b" = 6, "fail-oldest" = 8, "fail-newest" = 8, "dismiss" = 2, "success-oldest" = 5, "previous" = 2, "success-newest" = 4, "refresh" = 3 }
+model = { "query" = "a", "page" = 1, "sequence" = 37, "activeId" = 37, "pending" = [{ "id" = 19, "query" = "b", "page" = 1 }, { "id" = 20, "query" = "a", "page" = 1 }, { "id" = 24, "query" = "a", "page" = 1 }, { "id" = 25, "query" = "a", "page" = 2 }, { "id" = 26, "query" = "", "page" = 1 }, { "id" = 27, "query" = "", "page" = 2 }, { "id" = 28, "query" = "", "page" = 3 }, { "id" = 29, "query" = "", "page" = 4 }, { "id" = 32, "query" = "a", "page" = 1 }, { "id" = 33, "query" = "", "page" = 1 }, { "id" = 34, "query" = "b", "page" = 1 }, { "id" = 35, "query" = "a", "page" = 1 }], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 37, "query" = "a", "page" = 1 }, "items" = ["Amber lamp", "Azure cup", "Birch chair"], "total" = 7 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

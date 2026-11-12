@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "dom"
+mutant = "stale"
+repeat = 2
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=stale", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-stale-2"]
+exit = 2
+timed_out = false
+elapsed_ms = 6776.22866600001
+started_at_ms = 1794503494999
+states = 15
+actions = 14
+semantic_actions = 14
+messages = 13
+startup_to_first_snapshot_ms = 4798.073974609375
+useful_ms = 1912.914
+actions_per_useful_second = 7.318677159558663
+states_per_useful_second = 7.841439813812853
+messages_per_useful_second = 6.795914505304473
+first_violation_useful_ms = 1912.914
+first_violation_actions = 14
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 14
+commands = 9
+firstViolationMessage = 13
+violations = ["stale_ignored", "page_data_matches"]
+coverage = { "response_matches_pending" = 2, "stale_ignored" = 2, "no_duplicate_pending" = 4, "dialog_recovers" = 0, "page_data_matches" = 1, "dom_wiring" = 4 }
+actionCoverage = { "search-b" = 2, "refresh" = 2, "next" = 4, "search-a" = 3, "delay" = 1, "fail-newest" = 1, "success-oldest" = 1 }
+model = { "query" = "a", "page" = 1, "sequence" = 9, "activeId" = 9, "pending" = [{ "id" = 2, "query" = "b", "page" = 2 }, { "id" = 3, "query" = "b", "page" = 3 }, { "id" = 4, "query" = "a", "page" = 1 }, { "id" = 5, "query" = "a", "page" = 2 }, { "id" = 7, "query" = "a", "page" = 1 }, { "id" = 8, "query" = "b", "page" = 1 }, { "id" = 9, "query" = "a", "page" = 1 }], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 1, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

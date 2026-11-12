@@ -1,0 +1,57 @@
+[2026-11-12T17:15:12.624Z WARN  bombadil::runner] time limit reached while waiting for driver, stopping
+[2026-11-12T17:15:12.624Z WARN  bombadil_browser::browser] state capture failed: generation=125, session=SessionId("554A0F56D411DF96C4DBF3BF5F382B5D"), call_frame=CallFrameId("7620088597976308839.2.0"): evaluating capture runtime state: channel disconnected while waiting for response for Debugger.evaluateOnCallFrame, retrying
+[2026-11-12T17:15:12.631Z WARN  bombadil_browser::browser] quiescence timer (capture failed) failed for generation 125, sending Quiesced anyway to avoid stall: send failed for Runtime.evaluate: sending on a disconnected channel
+dkitMessage("success-oldest")
+00:02.969 foldkitMessage("refresh")
+00:03.256 foldkitMessage("delay")
+00:03.410 foldkitMessage("next")
+00:03.595 foldkitMessage("next")
+00:03.816 foldkitMessage("search-a")
+00:03.902 foldkitMessage("search-a")
+00:04.120 foldkitMessage("refresh")
+00:04.317 foldkitMessage("refresh")
+00:04.471 foldkitMessage("refresh")
+00:04.584 foldkitMessage("next")
+00:04.633 foldkitMessage("fail-oldest")
+00:04.888 foldkitMessage("success-newest")
+00:05.044 foldkitMessage("fail-newest")
+00:05.254 foldkitMessage("search-all")
+00:05.450 foldkitMessage("fail-newest")
+00:05.585 foldkitMessage("fail-oldest")
+00:05.762 foldkitMessage("next")
+00:05.796 foldkitMessage("search-all")
+00:06.014 foldkitMessage("search-a")
+00:06.202 foldkitMessage("refresh")
+00:06.360 foldkitMessage("delay")
+00:06.644 foldkitMessage("search-a")
+00:06.798 foldkitMessage("success-oldest")
+00:06.948 foldkitMessage("fail-oldest")
+00:07.131 foldkitMessage("refresh")
+00:07.273 foldkitMessage("search-a")
+00:07.578 foldkitMessage("fail-newest")
+00:07.991 foldkitMessage("dismiss")
+00:08.237 foldkitMessage("search-b")
+00:08.319 foldkitMessage("fail-oldest")
+00:08.546 foldkitMessage("search-all")
+00:08.843 foldkitMessage("search-b")
+00:08.924 foldkitMessage("search-b")
+00:09.069 foldkitMessage("success-oldest")
+00:09.257 foldkitMessage("next")
+00:09.499 foldkitMessage("search-a")
+00:09.635 foldkitMessage("search-b")
+00:09.818 foldkitMessage("refresh")
+00:09.998 foldkitMessage("search-all")
+00:10.167 foldkitMessage("search-all")
+00:10.340 foldkitMessage("search-a")
+00:10.623 foldkitMessage("search-a")
+
+Test finished after time limit!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-wiring-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=wiring' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-wiring-3
+

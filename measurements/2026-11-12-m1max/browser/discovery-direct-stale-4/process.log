@@ -1,0 +1,134 @@
+00:00.000 foldkitMessage("delay")
+00:00.129 foldkitMessage("delay")
+00:00.258 foldkitMessage("search-b")
+00:00.443 foldkitMessage("delay")
+00:00.567 foldkitMessage("fail-newest")
+00:00.746 foldkitMessage("dismiss")
+00:00.974 foldkitMessage("search-b")
+00:01.197 foldkitMessage("search-b")
+00:01.386 foldkitMessage("refresh")
+00:01.509 foldkitMessage("search-b")
+00:01.686 foldkitMessage("search-b")
+00:01.793 foldkitMessage("search-b")
+00:01.948 foldkitMessage("search-a")
+00:02.014 foldkitMessage("search-all")
+00:02.190 foldkitMessage("search-b")
+00:02.355 foldkitMessage("search-all")
+00:02.525 foldkitMessage("delay")
+00:02.683 foldkitMessage("refresh")
+00:02.817 foldkitMessage("success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:02.943:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 4
+    dismiss: 1
+    fail-newest: 1
+    refresh: 2
+    search-a: 1
+    search-all: 2
+    search-b: 7
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 6
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 8
+    page_data_matches: 1
+    response_matches_pending: 2
+    stale_ignored: 1
+  firstViolationMessage: 17
+  messages: 17
+  model: 
+    activeId: 6
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 3
+        page: 1
+        query: a
+      - 
+        id: 4
+        page: 1
+        query: ""
+      - 
+        id: 5
+        page: 1
+        query: b
+      - 
+        id: 6
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Amber lamp
+          - Birch chair
+          - Blue bowl
+        request: 
+          id: 2
+          page: 1
+          query: b
+        total: 4
+    sequence: 6
+  readyIds: 
+    - 3
+    - 4
+    - 5
+    - 6
+  semanticActions: 19
+  tags: 
+    ClickedDismiss: 1
+    ClickedRefresh: 2
+    FailedFetchPage: 1
+    GotDialogMessage: 2
+    SucceededFetchPage: 1
+    UpdatedQuery: 10
+  tick: 4
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-stale-4
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=stale' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-stale-4
+

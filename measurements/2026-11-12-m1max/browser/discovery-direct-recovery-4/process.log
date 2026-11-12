@@ -1,0 +1,128 @@
+00:00.000 foldkitMessage("search-b")
+00:00.147 foldkitMessage("search-b")
+00:00.331 foldkitMessage("search-b")
+00:00.500 foldkitMessage("refresh")
+00:00.609 foldkitMessage("search-b")
+00:00.801 foldkitMessage("next")
+00:00.975 foldkitMessage("search-b")
+00:01.155 foldkitMessage("search-a")
+00:01.195 foldkitMessage("search-b")
+00:01.352 foldkitMessage("delay")
+00:01.482 foldkitMessage("delay")
+00:01.606 foldkitMessage("refresh")
+00:01.762 foldkitMessage("search-a")
+00:01.944 foldkitMessage("fail-newest")
+00:02.094 foldkitMessage("success-newest")
+00:02.285 foldkitMessage("success-oldest")
+00:02.505 foldkitMessage("refresh")
+00:02.641 foldkitMessage("success-oldest")
+00:02.857 foldkitMessage("search-all")
+00:02.942 foldkitMessage("search-a")
+00:03.099 foldkitMessage("search-b")
+00:03.218 foldkitMessage("success-newest")
+00:03.271 foldkitMessage("delay")
+00:03.447 foldkitMessage("fail-newest")
+00:03.606 foldkitMessage("dismiss")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:03.782:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 3
+    dismiss: 1
+    fail-newest: 2
+    next: 1
+    refresh: 3
+    search-a: 3
+    search-all: 1
+    search-b: 7
+    success-newest: 2
+    success-oldest: 2
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 9
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 12
+    page_data_matches: 0
+    response_matches_pending: 6
+    stale_ignored: 5
+  firstViolationMessage: 23
+  messages: 24
+  model: 
+    activeId: 9
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 6
+        page: 1
+        query: a
+      - 
+        id: 7
+        page: 1
+        query: ""
+      - 
+        id: 8
+        page: 1
+        query: a
+    query: b
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 9
+  readyIds: 
+    - 6
+    - 7
+    - 8
+  semanticActions: 25
+  tags: 
+    ClickedDismiss: 1
+    ClickedPage: 1
+    ClickedRefresh: 3
+    FailedFetchPage: 2
+    GotDialogMessage: 2
+    SucceededFetchPage: 4
+    UpdatedQuery: 11
+  tick: 3
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - dialog_recovers
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-recovery-4
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=recovery' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-recovery-4
+

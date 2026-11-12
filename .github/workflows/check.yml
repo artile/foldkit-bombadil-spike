@@ -1,0 +1,15 @@
+name: Check
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  fixture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v3
+      - run: mise exec -- bun install --frozen-lockfile
+      - run: mise run check
+      - run: mise exec -- bun scripts/validate-evidence.ts measurements/2026-11-12-m1max measurements/2026-11-12-fixed30 measurements/2026-11-12-final-recovery

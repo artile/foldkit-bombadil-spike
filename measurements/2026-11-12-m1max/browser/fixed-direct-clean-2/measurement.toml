@@ -1,0 +1,27 @@
+kind = "fixed-trace"
+engine = "direct"
+mutant = "clean"
+repeat = 2
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/trace-direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/fixed-direct-clean-2"]
+exit = 0
+timed_out = false
+elapsed_ms = 15080.453999999998
+started_at_ms = 1794503560463
+states = 57
+actions = 56
+semantic_actions = 56
+messages = 37
+startup_to_first_snapshot_ms = 6766.7529296875
+useful_ms = 8259.867
+actions_per_useful_second = 6.779770182740231
+states_per_useful_second = 6.900837507432021
+messages_per_useful_second = 4.479491013596224
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 56
+commands = 19
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 18, "stale_ignored" = 0, "no_duplicate_pending" = 18, "dialog_recovers" = 0, "page_data_matches" = 18, "dom_wiring" = 0 }
+actionCoverage = { "search-all" = 5, "delay" = 19, "success-newest" = 18, "next" = 5, "previous" = 5, "search-b" = 4 }
+model = { "query" = "", "page" = 1, "sequence" = 19, "activeId" = 19, "pending" = [{ "id" = 19, "query" = "", "page" = 1 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

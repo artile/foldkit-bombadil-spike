@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "dom"
+mutant = "wiring"
+repeat = 4
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=wiring", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-wiring-4"]
+exit = 2
+timed_out = false
+elapsed_ms = 5104.111250000016
+started_at_ms = 1794503824721
+states = 14
+actions = 13
+semantic_actions = 13
+messages = 12
+startup_to_first_snapshot_ms = 3080.3701171875
+useful_ms = 1966.695
+actions_per_useful_second = 6.610074261641993
+states_per_useful_second = 7.118541512537532
+messages_per_useful_second = 6.101607010746456
+first_violation_useful_ms = 1966.695
+first_violation_actions = 13
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 13
+commands = 6
+firstViolationMessage = 12
+violations = ["dom_wiring"]
+coverage = { "response_matches_pending" = 1, "stale_ignored" = 0, "no_duplicate_pending" = 6, "dialog_recovers" = 0, "page_data_matches" = 1, "dom_wiring" = 1 }
+actionCoverage = { "refresh" = 3, "delay" = 1, "success-oldest" = 1, "search-b" = 4, "search-a" = 2, "search-all" = 1, "next" = 1 }
+model = { "query" = "b", "page" = 1, "sequence" = 6, "activeId" = 6, "pending" = [{ "id" = 2, "query" = "b", "page" = 1 }, { "id" = 3, "query" = "a", "page" = 1 }, { "id" = 4, "query" = "", "page" = 1 }, { "id" = 5, "query" = "a", "page" = 1 }, { "id" = 6, "query" = "b", "page" = 1 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

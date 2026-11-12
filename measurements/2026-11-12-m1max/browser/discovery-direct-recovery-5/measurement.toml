@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "direct"
+mutant = "recovery"
+repeat = 5
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=recovery", "spec/direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-direct-recovery-5"]
+exit = 0
+timed_out = false
+elapsed_ms = 15117.379582999973
+started_at_ms = 1794503909149
+states = 85
+actions = 84
+semantic_actions = 84
+messages = 80
+startup_to_first_snapshot_ms = 3286.118896484375
+useful_ms = 11763.565
+actions_per_useful_second = 7.140692468652148
+states_per_useful_second = 7.225700712326578
+messages_per_useful_second = 6.800659493954426
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 84
+commands = 37
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 24, "stale_ignored" = 21, "no_duplicate_pending" = 41, "dialog_recovers" = 0, "page_data_matches" = 1, "dom_wiring" = 0 }
+actionCoverage = { "next" = 9, "refresh" = 7, "previous" = 3, "search-b" = 9, "search-a" = 13, "delay" = 8, "fail-oldest" = 3, "success-oldest" = 7, "search-all" = 9, "success-newest" = 5, "fail-newest" = 9, "retry" = 2 }
+model = { "query" = "b", "page" = 1, "sequence" = 37, "activeId" = 37, "pending" = [{ "id" = 21, "query" = "b", "page" = 1 }, { "id" = 22, "query" = "a", "page" = 1 }, { "id" = 23, "query" = "a", "page" = 2 }, { "id" = 24, "query" = "a", "page" = 1 }, { "id" = 25, "query" = "a", "page" = 2 }, { "id" = 26, "query" = "", "page" = 1 }, { "id" = 27, "query" = "", "page" = 2 }, { "id" = 28, "query" = "", "page" = 1 }, { "id" = 29, "query" = "a", "page" = 1 }, { "id" = 30, "query" = "a", "page" = 2 }, { "id" = 35, "query" = "a", "page" = 1 }, { "id" = 36, "query" = "", "page" = 1 }, { "id" = 37, "query" = "b", "page" = 1 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

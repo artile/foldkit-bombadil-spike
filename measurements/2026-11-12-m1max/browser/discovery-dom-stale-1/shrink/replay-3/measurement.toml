@@ -1,0 +1,7 @@
+kind = "shrink-replay"
+exit = 2
+timed_out = false
+elapsed_ms = 10460.438999999897
+started_at_ms = 1794504162253
+reproduced = true
+actions = 13

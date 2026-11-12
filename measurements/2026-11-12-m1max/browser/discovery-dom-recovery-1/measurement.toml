@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "dom"
+mutant = "recovery"
+repeat = 1
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=recovery", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-recovery-1"]
+exit = 2
+timed_out = false
+elapsed_ms = 11794.397333
+started_at_ms = 1794503386688
+states = 72
+actions = 71
+semantic_actions = 71
+messages = 64
+startup_to_first_snapshot_ms = 1238.547119140625
+useful_ms = 10506.384
+actions_per_useful_second = 6.757796021923432
+states_per_useful_second = 6.852976247584325
+messages_per_useful_second = 6.091534442297178
+first_violation_useful_ms = 10506.384
+first_violation_actions = 71
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 71
+commands = 23
+firstViolationMessage = 63
+violations = ["dialog_recovers"]
+coverage = { "response_matches_pending" = 23, "stale_ignored" = 18, "no_duplicate_pending" = 34, "dialog_recovers" = 1, "page_data_matches" = 6, "dom_wiring" = 8 }
+actionCoverage = { "next" = 6, "previous" = 2, "search-b" = 7, "search-all" = 9, "delay" = 11, "search-a" = 4, "success-oldest" = 5, "refresh" = 7, "success-newest" = 7, "fail-newest" = 6, "fail-oldest" = 5, "retry" = 1, "dismiss" = 1 }
+model = { "query" = "a", "page" = 1, "sequence" = 23, "activeId" = 23, "pending" = [], "result" = { "_tag" = "Failure", "error" = "Controlled failure" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

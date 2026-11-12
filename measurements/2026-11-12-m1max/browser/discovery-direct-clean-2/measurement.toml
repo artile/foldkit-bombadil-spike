@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "direct"
+mutant = "clean"
+repeat = 2
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-direct-clean-2"]
+exit = 0
+timed_out = false
+elapsed_ms = 15069.544582999995
+started_at_ms = 1794503458119
+states = 83
+actions = 82
+semantic_actions = 82
+messages = 77
+startup_to_first_snapshot_ms = 3626.777099609375
+useful_ms = 11399.953
+actions_per_useful_second = 7.193012111541162
+states_per_useful_second = 7.280731771438005
+messages_per_useful_second = 6.754413812056945
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 82
+commands = 33
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 25, "stale_ignored" = 20, "no_duplicate_pending" = 34, "dialog_recovers" = 2, "page_data_matches" = 6, "dom_wiring" = 0 }
+actionCoverage = { "delay" = 9, "next" = 9, "success-newest" = 12, "search-b" = 11, "search-all" = 7, "refresh" = 7, "previous" = 2, "search-a" = 10, "success-oldest" = 3, "fail-newest" = 7, "fail-oldest" = 3, "dismiss" = 2 }
+model = { "query" = "a", "page" = 1, "sequence" = 33, "activeId" = 33, "pending" = [{ "id" = 22, "query" = "a", "page" = 2 }, { "id" = 23, "query" = "", "page" = 1 }, { "id" = 24, "query" = "", "page" = 2 }, { "id" = 25, "query" = "a", "page" = 1 }, { "id" = 26, "query" = "a", "page" = 2 }, { "id" = 30, "query" = "b", "page" = 2 }, { "id" = 31, "query" = "a", "page" = 1 }, { "id" = 32, "query" = "", "page" = 1 }], "result" = { "_tag" = "Idle" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

@@ -1,0 +1,143 @@
+00:00.000 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.028 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.094 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:00.169 Clicking <button> (x: 391.8, y: 243.6, content: "Dismiss error")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:00.308:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 1
+    dismiss: 1
+    fail-newest: 1
+    refresh: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 1
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 1
+    stale_ignored: 0
+  firstViolationMessage: 4
+  messages: 5
+  model: 
+    activeId: 1
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: []
+    query: ""
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 1
+  readyIds: []
+  semanticActions: 4
+  tags: 
+    ClickedDismiss: 1
+    ClickedRefresh: 1
+    FailedFetchPage: 1
+    GotDialogMessage: 2
+  tick: 1
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dialog_recovers
+
+
+traceComplete was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => !state.current 
+  || state.current.semanticActions < 4
+
+however at 00:00.308:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 1
+    dismiss: 1
+    fail-newest: 1
+    refresh: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 1
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 1
+    stale_ignored: 0
+  firstViolationMessage: 4
+  messages: 5
+  model: 
+    activeId: 1
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: []
+    query: ""
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 1
+  readyIds: []
+  semanticActions: 4
+  tags: 
+    ClickedDismiss: 1
+    ClickedRefresh: 1
+    FailedFetchPage: 1
+    GotDialogMessage: 2
+  tick: 1
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dialog_recovers
+
+
+Test finished, finding 2 violations!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-final-recovery/dom-recovery
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=recovery' spec/recovery-dom.ts --headless --reproduce measurements/2026-11-12-final-recovery/dom-recovery
+

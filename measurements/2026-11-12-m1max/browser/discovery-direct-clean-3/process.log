@@ -1,0 +1,61 @@
+00:00.000 foldkitMessage("search-all")
+00:00.149 foldkitMessage("refresh")
+00:00.323 foldkitMessage("delay")
+00:00.510 foldkitMessage("delay")
+00:00.654 foldkitMessage("success-newest")
+00:00.747 foldkitMessage("search-all")
+00:00.927 foldkitMessage("next")
+00:01.030 foldkitMessage("next")
+00:01.132 foldkitMessage("previous")
+00:01.185 foldkitMessage("search-a")
+00:01.505 foldkitMessage("next")
+00:01.774 foldkitMessage("search-a")
+00:01.913 foldkitMessage("delay")
+00:02.102 foldkitMessage("fail-oldest")
+00:02.274 foldkitMessage("search-b")
+00:02.383 foldkitMessage("fail-oldest")
+00:02.611 foldkitMessage("success-oldest")
+00:02.836 foldkitMessage("search-all")
+00:03.067 foldkitMessage("delay")
+00:03.203 foldkitMessage("search-b")
+00:03.367 foldkitMessage("delay")
+00:03.582 foldkitMessage("next")
+00:03.682 foldkitMessage("fail-oldest")
+00:03.864 foldkitMessage("search-a")
+00:04.092 foldkitMessage("search-a")
+00:04.293 foldkitMessage("delay")
+00:04.432 foldkitMessage("next")
+00:04.648 foldkitMessage("fail-newest")
+00:04.750 foldkitMessage("previous")
+00:04.977 foldkitMessage("success-newest")
+00:05.195 foldkitMessage("search-a")
+00:05.314 foldkitMessage("refresh")
+00:05.434 foldkitMessage("fail-newest")
+00:05.594 foldkitMessage("search-b")
+00:05.770 foldkitMessage("fail-oldest")
+00:05.922 foldkitMessage("delay")
+00:06.009 foldkitMessage("fail-oldest")
+00:06.169 foldkitMessage("search-a")
+00:06.298 foldkitMessage("fail-oldest")
+00:06.470 foldkitMessage("search-b")
+00:06.544 foldkitMessage("fail-newest")
+00:06.723 foldkitMessage("success-newest")
+00:06.858 foldkitMessage("search-b")
+00:07.054 foldkitMessage("fail-oldest")
+00:07.193 foldkitMessage("search-a")
+00:07.409 foldkitMessage("search-a")
+00:07.633 foldkitMessage("success-newest")
+00:07.827 foldkitMessage("success-newest")
+00:08.048 foldkitMessage("search-a")
+00:08.208 foldkitMessage("refresh")
+
+Test finished after time limit!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-clean-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=clean' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-clean-3
+

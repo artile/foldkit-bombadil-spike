@@ -1,0 +1,116 @@
+00:00.000 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.243 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.320 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.397 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.511 Clicking <button> (x: 322.6, y: 259.4, content: "Next page")
+00:00.643 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.821 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.959 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.154 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:01.328:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 1
+    next: 3
+    refresh: 1
+    search-a: 1
+    search-all: 1
+    search-b: 2
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 8
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 3
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 0
+    stale_ignored: 0
+  firstViolationMessage: 8
+  messages: 8
+  model: 
+    activeId: 8
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 1
+        page: 1
+        query: ""
+      - 
+        id: 2
+        page: 1
+        query: b
+      - 
+        id: 3
+        page: 2
+        query: b
+      - 
+        id: 4
+        page: 3
+        query: b
+      - 
+        id: 5
+        page: 1
+        query: b
+      - 
+        id: 6
+        page: 2
+        query: b
+      - 
+        id: 7
+        page: 1
+        query: a
+      - 
+        id: 8
+        page: 1
+        query: a
+    query: a
+    result: 
+      _tag: Loading
+    sequence: 8
+  readyIds: []
+  semanticActions: 9
+  tags: 
+    ClickedPage: 3
+    ClickedRefresh: 1
+    UpdatedQuery: 4
+  tick: 1
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - no_duplicate_pending
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-duplicate-4
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=duplicate' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-duplicate-4
+

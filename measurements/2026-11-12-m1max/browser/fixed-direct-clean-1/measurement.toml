@@ -1,0 +1,27 @@
+kind = "fixed-trace"
+engine = "direct"
+mutant = "clean"
+repeat = 1
+status = "completed"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/trace-direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/fixed-direct-clean-1"]
+exit = 2
+timed_out = false
+elapsed_ms = 13212.880707999997
+started_at_ms = 1794503444866
+states = 61
+actions = 60
+semantic_actions = 60
+messages = 40
+startup_to_first_snapshot_ms = 3469.83203125
+useful_ms = 9605.002
+actions_per_useful_second = 6.246745185477317
+states_per_useful_second = 6.350857605235272
+messages_per_useful_second = 4.164496790318211
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 60
+commands = 20
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 20, "stale_ignored" = 0, "no_duplicate_pending" = 20, "dialog_recovers" = 0, "page_data_matches" = 20, "dom_wiring" = 0 }
+actionCoverage = { "search-all" = 5, "delay" = 20, "success-newest" = 20, "next" = 5, "previous" = 5, "search-b" = 5 }
+model = { "query" = "b", "page" = 1, "sequence" = 20, "activeId" = 20, "pending" = [], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 20, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

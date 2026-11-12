@@ -1,0 +1,41 @@
+00:00.000 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.305 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:00.669 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.981 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.165 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.373 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:01.549 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.652 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:01.767 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:01.962 Clicking <button> (x: 195.6, y: 123.8, content: "Retry request")
+00:02.130 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.317 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:02.433 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:02.673 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.814 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:02.923 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:03.083 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:03.261 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:03.431 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:03.615 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:03.787 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:04.000 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:04.270 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:04.456 Clicking <button> (x: 118.3, y: 548.2, content: "delay")
+00:04.662 Clicking <button> (x: 227.2, y: 548.2, content: "success-oldest")
+00:04.884 Clicking <button> (x: 616.3, y: 548.2, content: "fail-newest")
+00:05.050 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:05.155 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:05.310 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:05.502 Clicking <button> (x: 322.6, y: 259.4, content: "Next page")
+
+Test finished after time limit!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-recovery-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=recovery' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-recovery-3
+

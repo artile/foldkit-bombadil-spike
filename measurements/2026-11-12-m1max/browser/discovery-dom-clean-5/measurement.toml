@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "dom"
+mutant = "clean"
+repeat = 5
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-clean-5"]
+exit = 0
+timed_out = false
+elapsed_ms = 15076.606582999986
+started_at_ms = 1794503852715
+states = 83
+actions = 82
+semantic_actions = 82
+messages = 77
+startup_to_first_snapshot_ms = 3216.280029296875
+useful_ms = 11806.924
+actions_per_useful_second = 6.945077312261856
+states_per_useful_second = 7.029773377045537
+messages_per_useful_second = 6.5215969883434495
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 82
+commands = 42
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 20, "stale_ignored" = 18, "no_duplicate_pending" = 35, "dialog_recovers" = 0, "page_data_matches" = 2, "dom_wiring" = 21 }
+actionCoverage = { "next" = 15, "refresh" = 11, "search-a" = 11, "search-all" = 5, "search-b" = 9, "previous" = 6, "delay" = 5, "fail-oldest" = 6, "success-oldest" = 2, "success-newest" = 9, "fail-newest" = 3 }
+model = { "query" = "b", "page" = 1, "sequence" = 42, "activeId" = 42, "pending" = [{ "id" = 15, "query" = "b", "page" = 2 }, { "id" = 16, "query" = "b", "page" = 3 }, { "id" = 17, "query" = "b", "page" = 2 }, { "id" = 18, "query" = "b", "page" = 3 }, { "id" = 19, "query" = "b", "page" = 4 }, { "id" = 20, "query" = "b", "page" = 3 }, { "id" = 21, "query" = "b", "page" = 2 }, { "id" = 22, "query" = "b", "page" = 1 }, { "id" = 23, "query" = "b", "page" = 2 }, { "id" = 24, "query" = "", "page" = 1 }, { "id" = 25, "query" = "a", "page" = 1 }, { "id" = 26, "query" = "b", "page" = 1 }, { "id" = 27, "query" = "b", "page" = 2 }, { "id" = 28, "query" = "b", "page" = 3 }, { "id" = 32, "query" = "b", "page" = 1 }, { "id" = 35, "query" = "a", "page" = 1 }, { "id" = 36, "query" = "a", "page" = 2 }, { "id" = 37, "query" = "a", "page" = 1 }, { "id" = 38, "query" = "b", "page" = 1 }, { "id" = 39, "query" = "", "page" = 1 }, { "id" = 40, "query" = "b", "page" = 1 }, { "id" = 42, "query" = "b", "page" = 1 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

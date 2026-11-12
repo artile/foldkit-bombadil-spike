@@ -1,0 +1,139 @@
+00:00.000 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.134 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.302 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.477 Clicking <button> (x: 322.6, y: 259.4, content: "Next page")
+00:00.639 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.804 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.925 Clicking <button> (x: 322.6, y: 259.4, content: "Next page")
+00:01.085 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.173 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:01.332 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.451 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.533 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.657 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:01.777 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:01.912:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 1
+    fail-newest: 1
+    next: 4
+    refresh: 2
+    search-a: 3
+    search-b: 2
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 9
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 4
+    no_duplicate_pending: 4
+    page_data_matches: 1
+    response_matches_pending: 2
+    stale_ignored: 2
+  firstViolationMessage: 13
+  messages: 13
+  model: 
+    activeId: 9
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 2
+        page: 2
+        query: b
+      - 
+        id: 3
+        page: 3
+        query: b
+      - 
+        id: 4
+        page: 1
+        query: a
+      - 
+        id: 5
+        page: 2
+        query: a
+      - 
+        id: 7
+        page: 1
+        query: a
+      - 
+        id: 8
+        page: 1
+        query: b
+      - 
+        id: 9
+        page: 1
+        query: a
+    query: a
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Amber lamp
+          - Birch chair
+          - Blue bowl
+        request: 
+          id: 1
+          page: 1
+          query: b
+        total: 4
+    sequence: 9
+  readyIds: 
+    - 2
+    - 3
+    - 4
+    - 5
+  semanticActions: 14
+  tags: 
+    ClickedPage: 4
+    ClickedRefresh: 2
+    FailedFetchPage: 1
+    SucceededFetchPage: 1
+    UpdatedQuery: 5
+  tick: 1
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-stale-2
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=stale' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-stale-2
+

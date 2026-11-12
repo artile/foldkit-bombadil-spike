@@ -1,0 +1,87 @@
+00:00.000 foldkitMessage("refresh")
+00:00.178 foldkitMessage("next")
+00:00.244 foldkitMessage("next")
+00:00.307 foldkitMessage("refresh")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:00.464:
+
+extractors[0] = 
+  actionCoverage: 
+    next: 2
+    refresh: 2
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 4
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 0
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 0
+    stale_ignored: 0
+  firstViolationMessage: 4
+  messages: 4
+  model: 
+    activeId: 4
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 3
+    pending: 
+      - 
+        id: 1
+        page: 1
+        query: ""
+      - 
+        id: 2
+        page: 2
+        query: ""
+      - 
+        id: 3
+        page: 3
+        query: ""
+      - 
+        id: 4
+        page: 3
+        query: ""
+    query: ""
+    result: 
+      _tag: Loading
+    sequence: 4
+  readyIds: []
+  semanticActions: 4
+  tags: 
+    ClickedPage: 2
+    ClickedRefresh: 2
+  tick: 0
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - previous
+  violations: 
+    - no_duplicate_pending
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-duplicate-1/replay-1
+

@@ -1,0 +1,119 @@
+00:00.000 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.197 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.272 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.392 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.667 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.947 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:01.176 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:01.371 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.497 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.647 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.782 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:01.882:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 3
+    fail-oldest: 1
+    next: 1
+    refresh: 1
+    search-all: 2
+    search-b: 2
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 5
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 1
+    no_duplicate_pending: 3
+    page_data_matches: 1
+    response_matches_pending: 2
+    stale_ignored: 2
+  firstViolationMessage: 8
+  messages: 8
+  model: 
+    activeId: 5
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 3
+        page: 2
+        query: b
+      - 
+        id: 4
+        page: 1
+        query: b
+      - 
+        id: 5
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Amber lamp
+          - Birch chair
+          - Blue bowl
+        request: 
+          id: 2
+          page: 1
+          query: b
+        total: 4
+    sequence: 5
+  readyIds: 
+    - 3
+    - 4
+    - 5
+  semanticActions: 11
+  tags: 
+    ClickedPage: 1
+    ClickedRefresh: 1
+    FailedFetchPage: 1
+    SucceededFetchPage: 1
+    UpdatedQuery: 4
+  tick: 3
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-stale-4
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=stale' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-stale-4
+

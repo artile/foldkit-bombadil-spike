@@ -1,0 +1,97 @@
+00:00.000 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.115 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.302 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.425 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.597 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:00.823 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:01.080 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.231 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.420 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:01.641 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.851 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.033 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:02.241 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.412 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.613 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:02.813:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 2
+    fail-oldest: 2
+    next: 1
+    refresh: 2
+    search-a: 3
+    search-all: 4
+    success-newest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 4
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 1
+    no_duplicate_pending: 9
+    page_data_matches: 0
+    response_matches_pending: 3
+    stale_ignored: 3
+  firstViolationMessage: 13
+  messages: 13
+  model: 
+    activeId: 4
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 4
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Loading
+    sequence: 4
+  readyIds: []
+  semanticActions: 15
+  tags: 
+    ClickedPage: 1
+    ClickedRefresh: 2
+    FailedFetchPage: 2
+    SucceededFetchPage: 1
+    UpdatedQuery: 7
+  tick: 2
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dom_wiring
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-wiring-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=wiring' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-wiring-3
+

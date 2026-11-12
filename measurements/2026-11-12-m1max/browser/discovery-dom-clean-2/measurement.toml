@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "dom"
+mutant = "clean"
+repeat = 2
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-clean-2"]
+exit = 0
+timed_out = false
+elapsed_ms = 15224.179541999998
+started_at_ms = 1794503473212
+states = 77
+actions = 76
+semantic_actions = 76
+messages = 72
+startup_to_first_snapshot_ms = 2756.659912109375
+useful_ms = 12360.055
+actions_per_useful_second = 6.148839952573026
+states_per_useful_second = 6.229745741422671
+messages_per_useful_second = 5.825216797174446
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 76
+commands = 26
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 22, "stale_ignored" = 17, "no_duplicate_pending" = 39, "dialog_recovers" = 1, "page_data_matches" = 3, "dom_wiring" = 6 }
+actionCoverage = { "refresh" = 10, "search-b" = 8, "next" = 6, "search-a" = 8, "delay" = 9, "success-newest" = 4, "search-all" = 11, "fail-oldest" = 5, "success-oldest" = 7, "fail-newest" = 6, "retry" = 1, "dismiss" = 1 }
+model = { "query" = "b", "page" = 1, "sequence" = 26, "activeId" = 26, "pending" = [{ "id" = 22, "query" = "a", "page" = 1 }, { "id" = 23, "query" = "b", "page" = 1 }, { "id" = 24, "query" = "a", "page" = 1 }, { "id" = 25, "query" = "", "page" = 1 }], "result" = { "_tag" = "Failure", "error" = "Controlled failure" }, "dialog" = { "id" = "request-error", "isOpen" = true, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

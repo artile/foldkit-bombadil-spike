@@ -1,0 +1,20 @@
+kind = "discovery"
+engine = "fast-check"
+mutant = "wiring"
+seed = 1001
+runs_budget = 1000
+maximum_trace_length = 80
+elapsed_ms = 14.411707999999635
+evaluations_including_shrink = 1000
+semantic_actions_including_shrink = 4726
+messages_including_shrink = 4150
+actions_per_second_including_shrink = 327927.8209078424
+status = "passed"
+after_actions = 0
+accepted_shrinks = 0
+shrunk_trace = []
+initial_input = []
+shrunk_input = []
+replay_success = []
+trigger_coverage_including_shrink = { "response_matches_pending" = 326, "stale_ignored" = 177, "no_duplicate_pending" = 1214, "dialog_recovers" = 37, "page_data_matches" = 88, "dom_wiring" = 0 }
+action_coverage_including_shrink = { "next" = 739, "delay" = 712, "success-oldest" = 91, "refresh" = 704, "search-b" = 685, "search-all" = 697, "fail-newest" = 80, "search-a" = 681, "dismiss" = 37, "retry" = 25, "success-newest" = 72, "previous" = 120, "fail-oldest" = 83 }

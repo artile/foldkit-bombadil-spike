@@ -1,0 +1,20 @@
+kind = "discovery"
+engine = "effect-arbitrary"
+mutant = "clean"
+seed = 1004
+runs_budget = 1000
+maximum_trace_length = 80
+elapsed_ms = 164.90991699999995
+evaluations_including_shrink = 1000
+semantic_actions_including_shrink = 19235
+messages_including_shrink = 17452
+actions_per_second_including_shrink = 116639.43776043502
+status = "passed"
+after_actions = 0
+accepted_shrinks = 0
+shrunk_trace = []
+initial_input = []
+shrunk_input = []
+replay_success = []
+trigger_coverage_including_shrink = { "response_matches_pending" = 3855, "stale_ignored" = 3230, "no_duplicate_pending" = 7849, "dialog_recovers" = 131, "page_data_matches" = 465, "dom_wiring" = 0 }
+action_coverage_including_shrink = { "search-all" = 2477, "next" = 2353, "search-a" = 2453, "delay" = 2348, "search-b" = 2528, "refresh" = 2485, "previous" = 461, "fail-newest" = 934, "retry" = 144, "success-newest" = 983, "fail-oldest" = 947, "success-oldest" = 991, "dismiss" = 131 }
