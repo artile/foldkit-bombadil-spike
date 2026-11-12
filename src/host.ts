@@ -47,6 +47,9 @@ const settled = async () => {
 }
 
 if (TEST_BRIDGE) {
+  let semanticActions = 0
+  const actionCoverage: Record<string, number> = {}
+  const countAction = (action: string) => { semanticActions++; actionCoverage[action] = (actionCoverage[action] ?? 0) + 1 }
   const panel = document.createElement('aside')
   panel.setAttribute('aria-label', 'Test transport controls')
   panel.innerHTML = '<h2>Test transport</h2>'
@@ -62,6 +65,7 @@ if (TEST_BRIDGE) {
   // changes OnClick's Message but leaves the visible control's intent intact.
   document.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target.closest('button') : null
+    if (target?.dataset.action) countAction(target.dataset.action)
     if (target?.hasAttribute('data-expected-page')) observer.expectedPage = Number(target.getAttribute('data-expected-page'))
   }, true)
   const bridge = {
@@ -76,12 +80,13 @@ if (TEST_BRIDGE) {
     async act(raw: unknown) {
       const action = Schema.decodeUnknownSync(Action)(raw)
       if (!validActions(observer.model, transport.readyIds()).includes(action)) throw new Error(`Invalid action: ${action}`)
+      countAction(action)
       const message = toMessage(observer.model, action)
       if (message) await bridge.send(message)
       else { transport.act(action); await settled() }
     },
     settled,
-    snapshot: () => ({ ...observer.snapshot(), tick: transport.tick, readyIds: transport.readyIds(), valid: validActions(observer.model, transport.readyIds()) }),
+    snapshot: () => ({ ...observer.snapshot(), semanticActions, actionCoverage, tick: transport.tick, readyIds: transport.readyIds(), valid: validActions(observer.model, transport.readyIds()) }),
   }
   Object.defineProperty(window, '__foldkitTest', { value: bridge })
   // Kept in sync after runtime patches, without adding effects to view.
