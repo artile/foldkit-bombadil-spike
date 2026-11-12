@@ -7,6 +7,7 @@ const Trace = Schema.Struct({
   violations: Schema.Array(Schema.Unknown),
 })
 const Snapshot = Schema.Struct({
+  browser: Schema.String,
   semanticActions: Schema.Number,
   messages: Schema.Number,
   commands: Schema.Number,

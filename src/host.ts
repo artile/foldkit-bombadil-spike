@@ -86,7 +86,7 @@ if (TEST_BRIDGE) {
       else { transport.act(action); await settled() }
     },
     settled,
-    snapshot: () => ({ ...observer.snapshot(), semanticActions, actionCoverage, tick: transport.tick, readyIds: transport.readyIds(), valid: validActions(observer.model, transport.readyIds()) }),
+    snapshot: () => ({ ...observer.snapshot(), browser: navigator.userAgent, semanticActions, actionCoverage, tick: transport.tick, readyIds: transport.readyIds(), valid: validActions(observer.model, transport.readyIds()) }),
   }
   Object.defineProperty(window, '__foldkitTest', { value: bridge })
   // Kept in sync after runtime patches, without adding effects to view.
