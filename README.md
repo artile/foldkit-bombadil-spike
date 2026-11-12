@@ -68,7 +68,7 @@ mise exec -- bun scripts/benchmark.ts measurements/my-fresh-run
 mise exec -- bun scripts/report.ts measurements/my-fresh-run
 ```
 
-You can override `BOMBADIL` with an absolute path to another **0.7.10** binary. Its version and SHA-256 are recorded. The recorded sample's source commit appears in `environment.toml`; later commits add the report and evidence.
+You can override `BOMBADIL` with an absolute path to another **0.7.10** binary. Its version and SHA-256 are recorded. The recorded sample's source commit appears in `environment.toml`; later commits add the report, evidence, test guards a process-log capture fix and a Dialog panel CSS repair. Timing/discovery data stays pinned to its measured commit.
 
 The original 15-second fixed-trace series includes incomplete attempts. They stay in the evidence. A separate, predeclared follow-up repeats **all ten** fixed browser comparisons with a 30-second limit, then combines that series with the original discovery/headless data:
 
@@ -104,6 +104,12 @@ mise exec -- node_modules/@antithesishq/bombadil/binaries/bombadil-darwin-arm64 
   'http://127.0.0.1:4173/?mutant=stale' spec/direct.ts --headless \
   --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-stale-1 \
   --output-path .scratch/replay
+```
+
+The final checkout also fixes a transparent Dialog panel found during visual QA. The historical benchmark commits remain explicit. To repeat the deterministic final-layout check (both paths, clean plus recovery mutant):
+
+```sh
+mise exec -- bun scripts/recovery-check.ts measurements/my-final-recovery
 ```
 
 ## What is checked

@@ -9,8 +9,8 @@ const server = Bun.serve({
       body{font:16px system-ui;max-width:860px;margin:32px auto;padding:0 16px;color:#1d2635;background:#f5f7fb}
       button,input{font:inherit;padding:8px 12px;margin:4px;border:1px solid #b4bdcc;border-radius:6px;background:white;color:inherit}
       button:disabled{opacity:.4}nav{margin:12px 0}li{padding:8px}pre{white-space:pre-wrap;font-size:12px}
-      dialog{border:1px solid #b4bdcc;border-radius:12px;padding:24px;max-width:420px}aside{border-top:1px solid #ccd3df;margin-top:24px}
-      @media(prefers-color-scheme:dark){body{background:#161d2a;color:#e8edf5}button,input,dialog{background:#273246;color:#e8edf5}}
+      dialog>div{box-sizing:border-box;max-width:420px;width:calc(100% - 32px);margin:10vh auto;padding:24px;border:1px solid #b4bdcc;border-radius:12px;background:#f5f7fb;color:#1d2635}dialog{border:1px solid #b4bdcc;border-radius:12px;padding:24px;max-width:420px}aside{border-top:1px solid #ccd3df;margin-top:24px}
+      @media(prefers-color-scheme:dark){body{background:#161d2a;color:#e8edf5}button,input,dialog{background:#273246;color:#e8edf5}dialog>div{background:#273246;color:#e8edf5}}
       </style><div id="app"></div><script type="module" src="${url.pathname === '/production' ? '/production.js' : '/host.js'}"></script></html>`, { headers: { 'content-type': 'text/html', 'content-security-policy': "default-src 'self'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:" } })
   },
 })
