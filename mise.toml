@@ -1,0 +1,5 @@
+[tools]
+bun = "1.4.4"
+
+[tasks.check]
+run = ["bun run typecheck", "bun test src", "bun run build"]
