@@ -1,0 +1,101 @@
+00:00.000 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.048 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.241 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.339 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.501 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.647 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.881 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:01.042 Clicking <button> (x: 375.9, y: 548.2, content: "success-newest")
+00:01.169 Clicking <button> (x: 227.2, y: 548.2, content: "success-oldest")
+00:01.315 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.427 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.575 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:01.697 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.901 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:02.062 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:02.197 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:02.379 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:02.511 Clicking <button> (x: 64.8, y: 123.8, content: "Dismiss error")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:02.674:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 2
+    dismiss: 1
+    fail-newest: 1
+    fail-oldest: 1
+    refresh: 1
+    search-a: 6
+    search-all: 2
+    search-b: 1
+    success-newest: 2
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 5
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 8
+    page_data_matches: 3
+    response_matches_pending: 5
+    stale_ignored: 3
+  firstViolationMessage: 17
+  messages: 18
+  model: 
+    activeId: 5
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: []
+    query: a
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 5
+  readyIds: []
+  semanticActions: 18
+  tags: 
+    ClickedDismiss: 1
+    ClickedRefresh: 1
+    FailedFetchPage: 2
+    GotDialogMessage: 2
+    SucceededFetchPage: 3
+    UpdatedQuery: 9
+  tick: 2
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dialog_recovers
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-recovery-5
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=recovery' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-recovery-5
+

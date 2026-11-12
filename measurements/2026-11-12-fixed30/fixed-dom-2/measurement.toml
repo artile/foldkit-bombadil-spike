@@ -1,0 +1,22 @@
+kind = "fixed-trace"
+engine = "dom"
+repeat = 2
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/trace-dom.ts", "--headless", "--time-limit", "30s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-fixed30/fixed-dom-2"]
+budget_seconds = 30
+exit = 2
+elapsed_ms = 10081.733916999998
+status = "completed"
+semantic_actions = 60
+actions = 60
+states = 61
+useful_ms = 7623.453
+startup_to_first_snapshot_ms = 2365.02197265625
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 60
+messages = 40
+commands = 20
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 20, "stale_ignored" = 0, "no_duplicate_pending" = 20, "dialog_recovers" = 0, "page_data_matches" = 20, "dom_wiring" = 10 }
+actionCoverage = { "search-all" = 5, "delay" = 20, "success-newest" = 20, "next" = 5, "previous" = 5, "search-b" = 5 }
+model = { "query" = "b", "page" = 1, "sequence" = 20, "activeId" = 20, "pending" = [], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 20, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

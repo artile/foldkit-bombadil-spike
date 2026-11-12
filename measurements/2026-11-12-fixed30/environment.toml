@@ -1,0 +1,8 @@
+source_commit = "c1d1df8df1f9da0f3e7e63ff7fee0b90a10bf198"
+recorded_at = "2026-11-12T17:23:58.773Z"
+purpose = "Predeclared 30s follow-up: all 10 fixed browser runs; original 15s runs retained"
+budget_seconds = 30
+repeats = 5
+width = 1024
+height = 768
+fixture_source_commit = "175ec469a122863b96e07c845ba44a062c6e6cdc"

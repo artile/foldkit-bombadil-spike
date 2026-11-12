@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "direct"
+mutant = "duplicate"
+repeat = 1
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=duplicate", "spec/direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-direct-duplicate-1"]
+exit = 2
+timed_out = false
+elapsed_ms = 1795.1602920000005
+started_at_ms = 1794503384891
+states = 5
+actions = 4
+semantic_actions = 4
+messages = 4
+startup_to_first_snapshot_ms = 1209.157958984375
+useful_ms = 525.557
+actions_per_useful_second = 7.61097273939839
+states_per_useful_second = 9.513715924247988
+messages_per_useful_second = 7.61097273939839
+first_violation_useful_ms = 525.557
+first_violation_actions = 4
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 4
+commands = 4
+firstViolationMessage = 4
+violations = ["no_duplicate_pending"]
+coverage = { "response_matches_pending" = 0, "stale_ignored" = 0, "no_duplicate_pending" = 1, "dialog_recovers" = 0, "page_data_matches" = 0, "dom_wiring" = 0 }
+actionCoverage = { "refresh" = 2, "next" = 2 }
+model = { "query" = "", "page" = 3, "sequence" = 4, "activeId" = 4, "pending" = [{ "id" = 1, "query" = "", "page" = 1 }, { "id" = 2, "query" = "", "page" = 2 }, { "id" = 3, "query" = "", "page" = 3 }, { "id" = 4, "query" = "", "page" = 3 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

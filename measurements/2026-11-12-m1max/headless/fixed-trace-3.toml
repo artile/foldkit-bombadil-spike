@@ -1,0 +1,10 @@
+kind = "fixed-trace"
+engine = "headless"
+repeat = 3
+elapsed_ms = 0.5263749999994616
+semantic_actions = 60
+messages = 40
+actions_per_second = 113987.17644276678
+violations = []
+final_model = { "query" = "b", "page" = 1, "sequence" = 20, "activeId" = 20, "pending" = [], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 20, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }
+trigger_coverage = { "response_matches_pending" = 20, "stale_ignored" = 0, "no_duplicate_pending" = 20, "dialog_recovers" = 0, "page_data_matches" = 20, "dom_wiring" = 0 }

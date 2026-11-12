@@ -1,0 +1,16 @@
+Shrinking for property `properties`: 13 actions, 13 up to its earliest violation
+Calibrating by replaying the trace 3 time(s)...
+Reproduced in 3/3 calibration run(s), retrying candidates up to 1 time(s)
+  13 actions
+
+Shrinking stopped after time limit!
+
+  Property:   properties
+  Actions:    13 → 13 (13 up to earliest violation)
+  Reproduced: 3/3 (original: 3/3)
+  Runs:       4 in 20s
+
+Inspect the shrunk trace using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-stale-1/shrink
+

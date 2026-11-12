@@ -1,0 +1,146 @@
+00:00.000 foldkitMessage("search-a")
+00:00.235 foldkitMessage("search-a")
+00:00.394 foldkitMessage("delay")
+00:00.528 foldkitMessage("success-oldest")
+00:00.674 foldkitMessage("search-a")
+00:00.876 foldkitMessage("next")
+00:00.975 foldkitMessage("previous")
+00:01.161 foldkitMessage("refresh")
+00:01.318 foldkitMessage("search-all")
+00:01.423 foldkitMessage("search-all")
+00:01.587 foldkitMessage("next")
+00:01.662 foldkitMessage("refresh")
+00:01.804 foldkitMessage("search-a")
+00:01.930 foldkitMessage("search-a")
+00:02.125 foldkitMessage("refresh")
+00:02.258 foldkitMessage("next")
+00:02.322 foldkitMessage("delay")
+00:02.474 foldkitMessage("fail-oldest")
+00:02.614 foldkitMessage("fail-newest")
+00:02.750 foldkitMessage("retry")
+00:02.948 foldkitMessage("delay")
+00:03.090 foldkitMessage("success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:03.192:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 3
+    fail-newest: 1
+    fail-oldest: 1
+    next: 3
+    previous: 1
+    refresh: 3
+    retry: 1
+    search-a: 5
+    search-all: 2
+    success-oldest: 2
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 9
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 0
+    no_duplicate_pending: 11
+    page_data_matches: 2
+    response_matches_pending: 4
+    stale_ignored: 2
+  firstViolationMessage: 21
+  messages: 21
+  model: 
+    activeId: 9
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 2
+    pending: 
+      - 
+        id: 4
+        page: 1
+        query: a
+      - 
+        id: 5
+        page: 1
+        query: ""
+      - 
+        id: 6
+        page: 2
+        query: ""
+      - 
+        id: 7
+        page: 1
+        query: a
+      - 
+        id: 9
+        page: 2
+        query: a
+    query: a
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Cedar table
+          - Gold frame
+          - Indigo vase
+        request: 
+          id: 3
+          page: 2
+          query: a
+        total: 7
+    sequence: 9
+  readyIds: 
+    - 4
+    - 5
+    - 6
+    - 7
+    - 9
+  semanticActions: 22
+  tags: 
+    ClickedPage: 4
+    ClickedRefresh: 3
+    ClickedRetry: 1
+    FailedFetchPage: 2
+    GotDialogMessage: 2
+    SucceededFetchPage: 2
+    UpdatedQuery: 7
+  tick: 3
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - previous
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-stale-5
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=stale' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-stale-5
+

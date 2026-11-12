@@ -1,0 +1,26 @@
+kind = "discovery"
+engine = "fast-check"
+mutant = "duplicate"
+seed = 1002
+runs_budget = 1000
+maximum_trace_length = 80
+elapsed_ms = 0.5052089999999225
+evaluations_including_shrink = 90
+semantic_actions_including_shrink = 190
+messages_including_shrink = 171
+actions_per_second_including_shrink = 376081.97795373626
+status = "violation"
+first_violation_ms = 0.06529200000022684
+first_violation_cumulative_actions = 6
+shrink_and_return_ms = 0.4399169999996957
+before_actions = 2
+after_actions = 2
+accepted_shrinks = 12
+original_trace = ["search-b", "search-b"]
+shrunk_trace = ["next", "refresh"]
+initial_input = []
+shrunk_input = [1877, 61498]
+replay_token = "6:3:1:1:10:6:5:6:2:6:9:0:16"
+replay_success = [true, true, true]
+trigger_coverage_including_shrink = { "response_matches_pending" = 0, "stale_ignored" = 0, "no_duplicate_pending" = 13, "dialog_recovers" = 0, "page_data_matches" = 0, "dom_wiring" = 0 }
+action_coverage_including_shrink = { "delay" = 19, "search-all" = 10, "next" = 69, "search-b" = 52, "search-a" = 24, "refresh" = 10, "previous" = 6 }

@@ -1,0 +1,8 @@
+kind = "replay"
+exit = 2
+timed_out = false
+elapsed_ms = 2311.062750000041
+started_at_ms = 1794504082449
+reproduced = true
+violations = ["dom_wiring"]
+actions = 3

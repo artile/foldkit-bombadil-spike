@@ -1,0 +1,144 @@
+00:00.000 foldkitMessage("search-all")
+00:00.125 foldkitMessage("delay")
+00:00.216 foldkitMessage("success-newest")
+00:00.414 foldkitMessage("next")
+00:00.546 foldkitMessage("delay")
+00:00.680 foldkitMessage("success-newest")
+00:00.717 foldkitMessage("previous")
+00:00.914 foldkitMessage("delay")
+00:01.148 foldkitMessage("success-newest")
+00:01.310 foldkitMessage("search-b")
+00:01.485 foldkitMessage("delay")
+00:01.556 foldkitMessage("success-newest")
+00:01.806 foldkitMessage("search-all")
+00:01.925 foldkitMessage("delay")
+00:01.983 foldkitMessage("success-newest")
+00:02.056 foldkitMessage("next")
+00:02.280 foldkitMessage("delay")
+00:02.388 foldkitMessage("success-newest")
+00:02.665 foldkitMessage("previous")
+00:02.754 foldkitMessage("delay")
+00:02.948 foldkitMessage("success-newest")
+00:03.066 foldkitMessage("search-b")
+00:03.150 foldkitMessage("delay")
+00:03.377 foldkitMessage("success-newest")
+00:03.577 foldkitMessage("search-all")
+00:03.719 foldkitMessage("delay")
+00:03.818 foldkitMessage("success-newest")
+00:03.944 foldkitMessage("next")
+00:04.173 foldkitMessage("delay")
+00:04.288 foldkitMessage("success-newest")
+00:04.329 foldkitMessage("previous")
+00:04.379 foldkitMessage("delay")
+00:04.533 foldkitMessage("success-newest")
+00:04.669 foldkitMessage("search-b")
+00:04.773 foldkitMessage("delay")
+00:04.863 foldkitMessage("success-newest")
+00:05.031 foldkitMessage("search-all")
+00:05.297 foldkitMessage("delay")
+00:05.464 foldkitMessage("success-newest")
+00:05.684 foldkitMessage("next")
+00:05.851 foldkitMessage("delay")
+00:06.008 foldkitMessage("success-newest")
+00:06.172 foldkitMessage("previous")
+00:06.244 foldkitMessage("delay")
+00:06.307 foldkitMessage("success-newest")
+00:06.347 foldkitMessage("search-b")
+00:06.560 foldkitMessage("delay")
+00:06.662 foldkitMessage("success-newest")
+00:06.782 foldkitMessage("search-all")
+00:06.959 foldkitMessage("delay")
+00:07.013 foldkitMessage("success-newest")
+00:07.070 foldkitMessage("next")
+00:07.254 foldkitMessage("delay")
+00:07.428 foldkitMessage("success-newest")
+00:07.463 foldkitMessage("previous")
+00:07.674 foldkitMessage("delay")
+00:07.793 foldkitMessage("success-newest")
+00:07.979 foldkitMessage("search-b")
+00:08.127 foldkitMessage("delay")
+00:08.276 foldkitMessage("success-newest")
+
+traceComplete was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => !state.current 
+  || state.current.semanticActions < trace.length
+
+however at 00:08.419:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 20
+    next: 5
+    previous: 5
+    search-all: 5
+    search-b: 5
+    success-newest: 20
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 20
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 0
+    no_duplicate_pending: 20
+    page_data_matches: 20
+    response_matches_pending: 20
+    stale_ignored: 0
+  firstViolationMessage: 0
+  messages: 40
+  model: 
+    activeId: 20
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: []
+    query: b
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Amber lamp
+          - Birch chair
+          - Blue bowl
+        request: 
+          id: 20
+          page: 1
+          query: b
+        total: 4
+    sequence: 20
+  readyIds: []
+  semanticActions: 60
+  tags: 
+    ClickedPage: 10
+    SucceededFetchPage: 20
+    UpdatedQuery: 10
+  tick: 20
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: []
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-fixed30/fixed-direct-4
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=clean' spec/trace-direct.ts --headless --reproduce measurements/2026-11-12-fixed30/fixed-direct-4
+

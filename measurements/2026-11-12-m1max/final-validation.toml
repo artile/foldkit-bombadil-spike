@@ -1,0 +1,12 @@
+validated_at = "2026-11-12T17:32:02.879Z"
+clean_node_modules_install = true
+shared_bun_cache = true
+frozen_lockfile = true
+typecheck = "passed"
+unit_story_scene_tests = { "passed" = 11, "failed" = 0 }
+build = "passed"
+production_bridge_bundle_guard = "passed"
+evidence_checks = { "discovery" = 100, "matched_traces" = 15, "browser_replay_success" = 24, "browser_replay_total" = 24, "headless_replay_success" = 90, "headless_replay_total" = 90, "final_layout_regressions" = 4 }
+browser_smoke = { "initial_messages" = 0, "initial_tick" = 0, "forged_reply_rejected" = true, "real_request_messages" = 2, "real_request_commands" = 1, "pending_after_success" = 0, "rendered_model_matches" = true, "visible_items" = ["Amber lamp", "Azure cup", "Birch chair"], "native_dialog_opened" = true, "native_click_dismissed" = true, "dialog_result_after_dismiss" = "Idle", "phone_dark_overflow" = false, "production_bridge_present" = false, "production_transport_panel_present" = false }
+test_server_closed = true
+preview_tab_closed = true

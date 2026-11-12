@@ -1,0 +1,252 @@
+00:00.000 foldkitMessage("search-a")
+00:00.091 foldkitMessage("delay")
+00:00.165 foldkitMessage("fail-oldest")
+00:00.325 foldkitMessage("retry")
+00:00.537 foldkitMessage("search-b")
+00:00.690 foldkitMessage("search-a")
+00:00.895 foldkitMessage("search-a")
+00:00.988 foldkitMessage("search-a")
+00:01.184 foldkitMessage("search-b")
+00:01.354 foldkitMessage("next")
+00:01.431 foldkitMessage("previous")
+00:01.578 foldkitMessage("search-b")
+00:01.747 foldkitMessage("delay")
+00:01.847 foldkitMessage("success-newest")
+00:02.017 foldkitMessage("success-oldest")
+00:02.173 foldkitMessage("search-a")
+00:02.235 foldkitMessage("fail-oldest")
+00:02.413 foldkitMessage("search-b")
+00:02.587 foldkitMessage("search-b")
+00:02.658 foldkitMessage("search-a")
+00:02.805 foldkitMessage("refresh")
+00:02.896 foldkitMessage("search-b")
+00:03.113 foldkitMessage("search-b")
+00:03.366 foldkitMessage("fail-oldest")
+00:03.589 foldkitMessage("fail-oldest")
+00:03.781 foldkitMessage("refresh")
+00:03.936 foldkitMessage("success-oldest")
+00:04.161 foldkitMessage("next")
+00:04.347 foldkitMessage("search-b")
+00:04.448 foldkitMessage("search-all")
+00:04.530 foldkitMessage("search-all")
+00:04.647 foldkitMessage("delay")
+00:04.745 foldkitMessage("next")
+00:04.837 foldkitMessage("search-all")
+00:05.055 foldkitMessage("next")
+00:05.210 foldkitMessage("success-newest")
+00:05.373 foldkitMessage("fail-newest")
+00:05.530 foldkitMessage("fail-oldest")
+00:05.752 foldkitMessage("search-b")
+00:05.935 foldkitMessage("success-newest")
+00:06.145 foldkitMessage("success-newest")
+00:06.241 foldkitMessage("search-a")
+00:06.386 foldkitMessage("search-a")
+00:06.539 foldkitMessage("refresh")
+00:06.680 foldkitMessage("success-newest")
+00:06.816 foldkitMessage("search-a")
+00:07.025 foldkitMessage("success-oldest")
+00:07.214 foldkitMessage("search-a")
+00:07.392 foldkitMessage("search-a")
+00:07.541 foldkitMessage("search-b")
+00:07.699 foldkitMessage("refresh")
+00:07.817 foldkitMessage("search-b")
+00:07.937 foldkitMessage("search-b")
+00:08.138 foldkitMessage("search-a")
+00:08.241 foldkitMessage("search-all")
+00:08.302 foldkitMessage("refresh")
+00:08.501 foldkitMessage("refresh")
+00:08.633 foldkitMessage("next")
+00:08.748 foldkitMessage("next")
+00:08.931 foldkitMessage("next")
+00:08.981 foldkitMessage("search-a")
+00:09.075 foldkitMessage("search-b")
+00:09.156 foldkitMessage("next")
+00:09.306 foldkitMessage("search-b")
+00:09.438 foldkitMessage("refresh")
+00:09.525 foldkitMessage("search-a")
+00:09.683 foldkitMessage("next")
+00:09.745 foldkitMessage("previous")
+00:09.813 foldkitMessage("next")
+00:09.956 foldkitMessage("refresh")
+00:10.053 foldkitMessage("delay")
+00:10.099 foldkitMessage("fail-newest")
+00:10.265 foldkitMessage("dismiss")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:10.432:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 4
+    dismiss: 1
+    fail-newest: 2
+    fail-oldest: 5
+    next: 10
+    previous: 2
+    refresh: 8
+    retry: 1
+    search-a: 14
+    search-all: 4
+    search-b: 14
+    success-newest: 5
+    success-oldest: 3
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 33
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 0
+    no_duplicate_pending: 35
+    page_data_matches: 2
+    response_matches_pending: 15
+    stale_ignored: 12
+  firstViolationMessage: 72
+  messages: 73
+  model: 
+    activeId: 33
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 2
+    pending: 
+      - 
+        id: 15
+        page: 2
+        query: ""
+      - 
+        id: 16
+        page: 1
+        query: ""
+      - 
+        id: 17
+        page: 2
+        query: ""
+      - 
+        id: 18
+        page: 1
+        query: b
+      - 
+        id: 19
+        page: 1
+        query: a
+      - 
+        id: 20
+        page: 1
+        query: b
+      - 
+        id: 21
+        page: 1
+        query: a
+      - 
+        id: 22
+        page: 1
+        query: ""
+      - 
+        id: 23
+        page: 2
+        query: ""
+      - 
+        id: 24
+        page: 3
+        query: ""
+      - 
+        id: 25
+        page: 4
+        query: ""
+      - 
+        id: 26
+        page: 1
+        query: a
+      - 
+        id: 27
+        page: 1
+        query: b
+      - 
+        id: 28
+        page: 2
+        query: b
+      - 
+        id: 29
+        page: 1
+        query: b
+      - 
+        id: 30
+        page: 1
+        query: a
+      - 
+        id: 31
+        page: 2
+        query: a
+      - 
+        id: 32
+        page: 1
+        query: a
+    query: a
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 33
+  readyIds: 
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+  semanticActions: 73
+  tags: 
+    ClickedDismiss: 1
+    ClickedPage: 12
+    ClickedRefresh: 8
+    ClickedRetry: 1
+    FailedFetchPage: 7
+    GotDialogMessage: 4
+    SucceededFetchPage: 8
+    UpdatedQuery: 32
+  tick: 4
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - previous
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - dialog_recovers
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-recovery-2/replay-1
+

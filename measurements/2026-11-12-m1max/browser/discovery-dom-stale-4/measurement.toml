@@ -1,0 +1,29 @@
+kind = "discovery"
+engine = "dom"
+mutant = "stale"
+repeat = 4
+status = "violation"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=stale", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-stale-4"]
+exit = 2
+timed_out = false
+elapsed_ms = 4398.1700420000125
+started_at_ms = 1794503774942
+states = 12
+actions = 11
+semantic_actions = 11
+messages = 8
+startup_to_first_snapshot_ms = 2452.2041015625
+useful_ms = 1882.131
+actions_per_useful_second = 5.844439095897151
+states_per_useful_second = 6.37575174097871
+messages_per_useful_second = 4.250501160652473
+first_violation_useful_ms = 1882.131
+first_violation_actions = 11
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 11
+commands = 5
+firstViolationMessage = 8
+violations = ["stale_ignored", "page_data_matches"]
+coverage = { "response_matches_pending" = 2, "stale_ignored" = 2, "no_duplicate_pending" = 3, "dialog_recovers" = 0, "page_data_matches" = 1, "dom_wiring" = 1 }
+actionCoverage = { "search-all" = 2, "delay" = 3, "search-b" = 2, "refresh" = 1, "fail-oldest" = 1, "next" = 1, "success-oldest" = 1 }
+model = { "query" = "", "page" = 1, "sequence" = 5, "activeId" = 5, "pending" = [{ "id" = 3, "query" = "b", "page" = 2 }, { "id" = 4, "query" = "b", "page" = 1 }, { "id" = 5, "query" = "", "page" = 1 }], "result" = { "_tag" = "Success", "data" = { "request" = { "id" = 2, "query" = "b", "page" = 1 }, "items" = ["Amber lamp", "Birch chair", "Blue bowl"], "total" = 4 } }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

@@ -1,0 +1,61 @@
+00:00.000 foldkitMessage("search-a")
+00:00.241 foldkitMessage("next")
+00:00.367 foldkitMessage("delay")
+00:00.473 foldkitMessage("fail-oldest")
+00:00.591 foldkitMessage("delay")
+00:00.756 foldkitMessage("delay")
+00:00.934 foldkitMessage("success-newest")
+00:01.060 foldkitMessage("delay")
+00:01.174 foldkitMessage("delay")
+00:01.290 foldkitMessage("search-all")
+00:01.346 foldkitMessage("refresh")
+00:01.499 foldkitMessage("search-a")
+00:01.609 foldkitMessage("delay")
+00:01.751 foldkitMessage("search-all")
+00:01.969 foldkitMessage("next")
+00:02.159 foldkitMessage("success-oldest")
+00:02.301 foldkitMessage("search-all")
+00:02.504 foldkitMessage("fail-newest")
+00:02.707 foldkitMessage("delay")
+00:02.860 foldkitMessage("next")
+00:03.063 foldkitMessage("refresh")
+00:03.224 foldkitMessage("previous")
+00:03.318 foldkitMessage("success-oldest")
+00:03.568 foldkitMessage("success-oldest")
+00:03.732 foldkitMessage("search-all")
+00:03.837 foldkitMessage("search-all")
+00:04.031 foldkitMessage("delay")
+00:04.121 foldkitMessage("next")
+00:04.303 foldkitMessage("next")
+00:04.383 foldkitMessage("success-oldest")
+00:04.488 foldkitMessage("fail-newest")
+00:04.644 foldkitMessage("refresh")
+00:04.824 foldkitMessage("success-oldest")
+00:04.995 foldkitMessage("search-b")
+00:05.156 foldkitMessage("search-b")
+00:05.345 foldkitMessage("next")
+00:05.422 foldkitMessage("previous")
+00:05.521 foldkitMessage("next")
+00:05.681 foldkitMessage("search-a")
+00:05.782 foldkitMessage("search-a")
+00:05.902 foldkitMessage("search-b")
+00:05.997 foldkitMessage("search-b")
+00:06.188 foldkitMessage("next")
+00:06.287 foldkitMessage("next")
+00:06.438 foldkitMessage("refresh")
+00:06.631 foldkitMessage("delay")
+00:06.821 foldkitMessage("search-a")
+00:06.961 foldkitMessage("success-newest")
+00:07.092 foldkitMessage("delay")
+00:07.340 foldkitMessage("fail-oldest")
+
+Test finished after time limit!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-recovery-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=recovery' spec/direct.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-direct-recovery-3
+

@@ -1,0 +1,58 @@
+[2026-11-12T17:13:25.209Z WARN  bombadil::runner] time limit reached while waiting for driver, stopping
+9.8, y: 203.4, content: "All items")
+00:00.282 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.512 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.755 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:00.941 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.224 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:01.406 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.593 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.818 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.994 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:02.101 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:02.282 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:02.417 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:02.645 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:02.828 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:03.024 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:03.303 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:03.403 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:03.528 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:03.646 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:03.846 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:04.002 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:04.194 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:04.420 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:04.585 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:04.697 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:04.877 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:05.071 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:05.266 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:05.376 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:05.505 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:05.610 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:05.795 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:05.939 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:06.053 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:06.168 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:06.262 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:06.454 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:06.631 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:06.773 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:06.900 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:07.150 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:07.257 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:07.454 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:07.561 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:07.728 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+
+Test finished after time limit!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-clean-3
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=clean' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-clean-3
+

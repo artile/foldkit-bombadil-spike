@@ -1,0 +1,8 @@
+kind = "replay"
+exit = 2
+timed_out = false
+elapsed_ms = 3685.696458999999
+started_at_ms = 1794504028627
+reproduced = true
+violations = ["no_duplicate_pending"]
+actions = 4

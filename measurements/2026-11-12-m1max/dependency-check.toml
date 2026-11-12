@@ -1,0 +1,10 @@
+foldkit = "0.170.0"
+effect = "4.1.0"
+platform_browser = "4.1.0"
+foldkit_effect_peer = "~4.1.0"
+foldkit_platform_browser_peer = "~4.1.0"
+effect_vitest = "not installed"
+test_runner = "bun:test with foldkit/story and foldkit/scene"
+checked = true
+reference_tag = "foldkit@0.170.0"
+reference_commit = "a471adb24d750ab9e8d8312edad53ff6f26d961b"

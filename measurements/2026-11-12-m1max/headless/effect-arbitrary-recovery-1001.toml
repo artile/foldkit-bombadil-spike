@@ -1,0 +1,26 @@
+kind = "discovery"
+engine = "effect-arbitrary"
+mutant = "recovery"
+seed = 1001
+runs_budget = 1000
+maximum_trace_length = 80
+elapsed_ms = 2.7339999999999236
+evaluations_including_shrink = 279
+semantic_actions_including_shrink = 1040
+messages_including_shrink = 898
+actions_per_second_including_shrink = 380395.02560352196
+status = "violation"
+first_violation_ms = 1.2788330000003043
+first_violation_cumulative_actions = 436
+shrink_and_return_ms = 1.4551669999996193
+before_actions = 6
+after_actions = 4
+accepted_shrinks = 9
+original_trace = ["search-a", "delay", "refresh", "refresh", "fail-oldest", "dismiss"]
+shrunk_trace = ["search-a", "delay", "fail-oldest", "dismiss"]
+initial_input = [43260, 27820, 3, 60253, 8, 13382, 27862, 10606, 1]
+shrunk_input = [0, 27652, 8, 0]
+replay_token = "[0,\"1001\",152,12,[4,16,8,10,12,11,16,16,10],\"ReturnedFalse\"]"
+replay_success = [true, true, true]
+trigger_coverage_including_shrink = { "response_matches_pending" = 109, "stale_ignored" = 69, "no_duplicate_pending" = 287, "dialog_recovers" = 10, "page_data_matches" = 23, "dom_wiring" = 0 }
+action_coverage_including_shrink = { "delay" = 171, "search-a" = 177, "search-b" = 182, "refresh" = 108, "search-all" = 198, "next" = 74, "previous" = 9, "success-newest" = 11, "fail-newest" = 2, "fail-oldest" = 23, "success-oldest" = 73, "dismiss" = 10, "retry" = 2 }

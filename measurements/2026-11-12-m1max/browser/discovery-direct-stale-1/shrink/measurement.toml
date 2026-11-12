@@ -1,0 +1,8 @@
+kind = "shrink"
+exit = 1
+timed_out = false
+elapsed_ms = 22413.528833999997
+started_at_ms = 1794504172717
+before_actions = 32
+retained_violation = false
+status = "incomplete-or-unsupported"

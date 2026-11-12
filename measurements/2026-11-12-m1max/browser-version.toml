@@ -1,0 +1,6 @@
+observed_at = "2026-11-12T17:12:09.528Z"
+version = "157.0.8103.78"
+method = "Read CFBundleShortVersionString from Google Chrome.app Info.plist; observed Bombadil-managed headless process uses this executable"
+executable = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+platform = "darwin-arm64"
+note = "navigator.userAgent uses Chrome UA reduction (157.0.0.0); this supplemental record supplies full installed version"

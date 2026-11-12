@@ -1,0 +1,155 @@
+00:00.000 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.189 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:00.323 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.442 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.590 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:00.669 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.839 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:01.033 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.144 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:01.299 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:01.381 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:01.631 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:01.787 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:01.912 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:02.093 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.309 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:02.388 Clicking <button> (x: 616.3, y: 548.2, content: "fail-newest")
+00:02.500 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.577 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.692 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:02.872 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:03.171 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:03.253 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:03.424 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:03.596 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:03.692 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:03.909 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:03.975 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:04.109 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:04.271 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:04.449 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:04.679 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:04.825 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:04.896 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:05.153 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:05.491 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:05.666 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:05.843 Clicking <button> (x: 322.6, y: 259.4, content: "Next page")
+00:05.935 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:06.101 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:06.221 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:06.337 Clicking <button> (x: 616.3, y: 464.2, content: "fail-newest")
+00:06.450 Clicking <button> (x: 195.6, y: 123.8, content: "Retry request")
+00:06.560 Clicking <button> (x: 227.2, y: 464.2, content: "success-oldest")
+00:06.797 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:06.934 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:07.020 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:07.162 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:07.288 Clicking <button> (x: 616.3, y: 548.2, content: "fail-newest")
+00:07.420 Clicking <button> (x: 375.9, y: 548.2, content: "success-newest")
+00:07.511 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:07.635 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:07.718 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:07.854 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:08.023 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:08.086 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:08.139 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:08.219 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:08.435 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:08.642 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:08.741 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:08.933 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:09.033 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:09.159 Clicking <button> (x: 375.9, y: 464.2, content: "success-newest")
+00:09.226 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:09.338 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:09.522 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:09.652 Clicking <button> (x: 226.3, y: 203.4, content: "Search a")
+00:09.768 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:09.946 Clicking <button> (x: 505.6, y: 464.2, content: "fail-oldest")
+00:10.074 Clicking <button> (x: 64.8, y: 123.8, content: "Dismiss error")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:10.191:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 11
+    dismiss: 1
+    fail-newest: 6
+    fail-oldest: 5
+    next: 6
+    previous: 2
+    refresh: 7
+    retry: 1
+    search-a: 4
+    search-all: 9
+    search-b: 7
+    success-newest: 7
+    success-oldest: 5
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 23
+  coverage: 
+    dialog_recovers: 1
+    dom_wiring: 8
+    no_duplicate_pending: 34
+    page_data_matches: 6
+    response_matches_pending: 23
+    stale_ignored: 18
+  firstViolationMessage: 63
+  messages: 64
+  model: 
+    activeId: 23
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: []
+    query: a
+    result: 
+      _tag: Failure
+      error: Controlled failure
+    sequence: 23
+  readyIds: []
+  semanticActions: 71
+  tags: 
+    ClickedDismiss: 1
+    ClickedPage: 8
+    ClickedRefresh: 7
+    ClickedRetry: 1
+    FailedFetchPage: 11
+    GotDialogMessage: 4
+    SucceededFetchPage: 12
+    UpdatedQuery: 20
+  tick: 11
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dialog_recovers
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-recovery-1/replay-3
+

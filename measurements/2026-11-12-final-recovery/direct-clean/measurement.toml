@@ -1,0 +1,16 @@
+kind = "final-regression"
+source_commit = "24dd9ceee7896f20702c54919e53753b4f30b21d"
+engine = "direct"
+mutant = "clean"
+passed = true
+exit = 2
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=clean", "spec/recovery-direct.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-final-recovery/direct-clean"]
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 4
+messages = 5
+commands = 1
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 1, "stale_ignored" = 0, "no_duplicate_pending" = 1, "dialog_recovers" = 1, "page_data_matches" = 0, "dom_wiring" = 0 }
+actionCoverage = { "refresh" = 1, "delay" = 1, "fail-newest" = 1, "dismiss" = 1 }
+model = { "query" = "", "page" = 1, "sequence" = 1, "activeId" = 1, "pending" = [], "result" = { "_tag" = "Idle" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

@@ -1,0 +1,73 @@
+00:00.000 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.126 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+00:00.198 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:00.394:
+
+extractors[0] = 
+  actionCoverage: 
+    next: 1
+    refresh: 2
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 1
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 1
+    no_duplicate_pending: 2
+    page_data_matches: 0
+    response_matches_pending: 0
+    stale_ignored: 0
+  firstViolationMessage: 3
+  messages: 3
+  model: 
+    activeId: 1
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 1
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Loading
+    sequence: 1
+  readyIds: []
+  semanticActions: 3
+  tags: 
+    ClickedPage: 1
+    ClickedRefresh: 2
+  tick: 0
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dom_wiring
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-wiring-1/replay-3
+

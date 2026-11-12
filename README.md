@@ -94,7 +94,7 @@ mise exec -- bun scripts/headless-benchmark.ts .scratch/headless-run
 Rebuild the checked-in report without running Chrome:
 
 ```sh
-mise exec -- bun scripts/report.ts measurements/2026-11-12-m1max measurements/2026-11-12-fixed30
+mise exec -- bun scripts/report.ts measurements/2026-11-12-m1max measurements/2026-11-12-fixed30 measurements/2026-11-12-final-recovery
 ```
 
 Original Bombadil `trace.jsonl` files are unchanged. Screenshots, downloads and profiles are omitted to keep the repository small; image references in JSONL therefore point to files that are not shipped. Replay reads the action trace. For screenshots, run a fresh test and inspect its output before removing images.

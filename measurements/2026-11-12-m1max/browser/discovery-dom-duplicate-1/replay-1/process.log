@@ -1,0 +1,91 @@
+00:00.000 Clicking <button> (x: 118.3, y: 464.2, content: "delay")
+00:00.153 Clicking <button> (x: 324.0, y: 203.4, content: "Search b")
+00:00.269 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+00:00.348 Clicking <button> (x: 150.4, y: 259.4, content: "Previous page")
+00:00.419 Clicking <button> (x: 418.0, y: 203.4, content: "Refresh")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:00.649:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 1
+    next: 1
+    previous: 1
+    refresh: 1
+    search-b: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 4
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 2
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 0
+    stale_ignored: 0
+  firstViolationMessage: 4
+  messages: 4
+  model: 
+    activeId: 4
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 1
+        page: 1
+        query: b
+      - 
+        id: 2
+        page: 2
+        query: b
+      - 
+        id: 3
+        page: 1
+        query: b
+      - 
+        id: 4
+        page: 1
+        query: b
+    query: b
+    result: 
+      _tag: Loading
+    sequence: 4
+  readyIds: []
+  semanticActions: 5
+  tags: 
+    ClickedPage: 2
+    ClickedRefresh: 1
+    UpdatedQuery: 1
+  tick: 1
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - no_duplicate_pending
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-duplicate-1/replay-1
+

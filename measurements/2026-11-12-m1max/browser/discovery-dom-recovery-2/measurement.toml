@@ -1,0 +1,27 @@
+kind = "discovery"
+engine = "dom"
+mutant = "recovery"
+repeat = 2
+status = "time-limit-clean"
+command = ["browser", "test", "http://127.0.0.1:4173/?mutant=recovery", "spec/dom.ts", "--headless", "--time-limit", "15s", "--exit-on-violation", "--output-path", "measurements/2026-11-12-m1max/browser/discovery-dom-recovery-2"]
+exit = 0
+timed_out = false
+elapsed_ms = 15228.341207999998
+started_at_ms = 1794503523006
+states = 79
+actions = 78
+semantic_actions = 78
+messages = 70
+startup_to_first_snapshot_ms = 3478.60107421875
+useful_ms = 11674.954
+actions_per_useful_second = 6.680968507456218
+states_per_useful_second = 6.766621949859503
+messages_per_useful_second = 5.995740968229939
+browser = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+semanticActions = 78
+commands = 33
+firstViolationMessage = 0
+violations = []
+coverage = { "response_matches_pending" = 22, "stale_ignored" = 22, "no_duplicate_pending" = 37, "dialog_recovers" = 0, "page_data_matches" = 0, "dom_wiring" = 13 }
+actionCoverage = { "search-all" = 12, "refresh" = 7, "next" = 11, "delay" = 8, "search-b" = 11, "success-newest" = 5, "success-oldest" = 5, "search-a" = 5, "fail-newest" = 4, "fail-oldest" = 8, "previous" = 2 }
+model = { "query" = "b", "page" = 1, "sequence" = 33, "activeId" = 33, "pending" = [{ "id" = 23, "query" = "a", "page" = 1 }, { "id" = 24, "query" = "", "page" = 1 }, { "id" = 25, "query" = "b", "page" = 1 }, { "id" = 26, "query" = "b", "page" = 2 }, { "id" = 27, "query" = "a", "page" = 1 }, { "id" = 28, "query" = "", "page" = 1 }, { "id" = 29, "query" = "", "page" = 2 }, { "id" = 30, "query" = "", "page" = 3 }, { "id" = 31, "query" = "", "page" = 1 }, { "id" = 32, "query" = "", "page" = 2 }, { "id" = 33, "query" = "b", "page" = 1 }], "result" = { "_tag" = "Loading" }, "dialog" = { "id" = "request-error", "isOpen" = false, "isAnimated" = false, "animation" = { "id" = "request-error-panel", "isShowing" = false, "transitionState" = "Idle", "transitionGeneration" = 0 }, "maybeFocusSelector" = {  } } }

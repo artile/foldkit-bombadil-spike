@@ -36,3 +36,15 @@ assert(headlessReplay.every(value => value === true), 'headless counterexample r
 const browserReplay = rows.filter(row => row.kind === 'replay' || row.kind === 'shrink-replay')
 assert(browserReplay.length >= 21, 'missing representative browser replays')
 console.log(`Validated ${discovery.length} discovery runs, ${fixed.length} matched traces, ${headlessReplay.length} headless replays. Browser replay results: ${browserReplay.filter(row => row.reproduced).length}/${browserReplay.length}; inspect raw failures rather than hiding them.`)
+
+const finalRoot = process.argv[4]
+if (finalRoot) {
+  const paths = await Array.fromAsync(new Bun.Glob('**/measurement.toml').scan(finalRoot))
+  assert.equal(paths.length, 4, 'missing final clean/recovery browser regression checks')
+  for (const path of paths) {
+    const row: Record<string, unknown> = Object.fromEntries(Object.entries(Bun.TOML.parse(await Bun.file(`${finalRoot}/${path}`).text())))
+    assert.equal(row.passed, true, `${path}: final regression failed`)
+    assert.equal(row.semanticActions, 4, `${path}: incomplete final regression`)
+  }
+  console.log('Validated all 4 final-layout browser regression checks.')
+}

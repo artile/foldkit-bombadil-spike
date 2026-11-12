@@ -1,0 +1,8 @@
+kind = "replay"
+exit = 2
+timed_out = false
+elapsed_ms = 7500.90770900005
+started_at_ms = 1794504007436
+reproduced = true
+violations = ["stale_ignored", "page_data_matches"]
+actions = 32

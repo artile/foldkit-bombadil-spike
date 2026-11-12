@@ -1,0 +1,20 @@
+kind = "discovery"
+engine = "fast-check"
+mutant = "clean"
+seed = 1002
+runs_budget = 1000
+maximum_trace_length = 80
+elapsed_ms = 79.69708400000036
+evaluations_including_shrink = 1000
+semantic_actions_including_shrink = 4736
+messages_including_shrink = 4163
+actions_per_second_including_shrink = 59425.009828464725
+status = "passed"
+after_actions = 0
+accepted_shrinks = 0
+shrunk_trace = []
+initial_input = []
+shrunk_input = []
+replay_success = []
+trigger_coverage_including_shrink = { "response_matches_pending" = 329, "stale_ignored" = 175, "no_duplicate_pending" = 1304, "dialog_recovers" = 33, "page_data_matches" = 95, "dom_wiring" = 0 }
+action_coverage_including_shrink = { "delay" = 706, "search-all" = 707, "next" = 669, "search-b" = 695, "search-a" = 734, "refresh" = 748, "success-newest" = 87, "success-oldest" = 90, "previous" = 86, "fail-oldest" = 73, "fail-newest" = 79, "retry" = 29, "dismiss" = 33 }

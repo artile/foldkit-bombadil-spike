@@ -1,0 +1,76 @@
+00:00.000 Clicking <button> (x: 129.8, y: 203.4, content: "All items")
+00:00.268 Clicking <button> (x: 183.7, y: 259.4, content: "Next page")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:00.399:
+
+extractors[0] = 
+  actionCoverage: 
+    next: 1
+    search-all: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 1
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 1
+    no_duplicate_pending: 1
+    page_data_matches: 0
+    response_matches_pending: 0
+    stale_ignored: 0
+  firstViolationMessage: 2
+  messages: 2
+  model: 
+    activeId: 1
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 1
+        page: 1
+        query: ""
+    query: ""
+    result: 
+      _tag: Loading
+    sequence: 1
+  readyIds: []
+  semanticActions: 2
+  tags: 
+    ClickedPage: 1
+    UpdatedQuery: 1
+  tick: 0
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+  violations: 
+    - dom_wiring
+
+
+Test finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-dom-wiring-2
+
+Reproduce this test using:
+
+  bombadil browser test 'http://127.0.0.1:4173/?mutant=wiring' spec/dom.ts --headless --reproduce measurements/2026-11-12-m1max/browser/discovery-dom-wiring-2
+

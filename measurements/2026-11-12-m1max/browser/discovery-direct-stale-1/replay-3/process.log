@@ -1,0 +1,165 @@
+00:00.000 foldkitMessage("refresh")
+00:00.210 foldkitMessage("next")
+00:00.410 foldkitMessage("search-all")
+00:00.472 foldkitMessage("next")
+00:00.550 foldkitMessage("search-b")
+00:00.612 foldkitMessage("search-all")
+00:00.766 foldkitMessage("delay")
+00:00.905 foldkitMessage("next")
+00:00.961 foldkitMessage("fail-oldest")
+00:01.089 foldkitMessage("search-b")
+00:01.225 foldkitMessage("fail-oldest")
+00:01.410 foldkitMessage("fail-newest")
+00:01.620 foldkitMessage("fail-newest")
+00:01.846 foldkitMessage("delay")
+00:02.006 foldkitMessage("search-all")
+00:02.190 foldkitMessage("search-b")
+00:02.428 foldkitMessage("delay")
+00:02.589 foldkitMessage("success-newest")
+00:02.648 foldkitMessage("search-all")
+00:02.767 foldkitMessage("next")
+00:03.033 foldkitMessage("search-a")
+00:03.107 foldkitMessage("search-all")
+00:03.256 foldkitMessage("fail-oldest")
+00:03.408 foldkitMessage("search-b")
+00:03.544 foldkitMessage("fail-oldest")
+00:03.678 foldkitMessage("refresh")
+00:03.831 foldkitMessage("next")
+00:03.991 foldkitMessage("fail-oldest")
+00:04.143 foldkitMessage("search-a")
+00:04.172 foldkitMessage("search-all")
+00:04.296 foldkitMessage("search-a")
+00:04.448 foldkitMessage("success-oldest")
+
+properties was violated:
+
+as of 00:00.000, it should always be the case that:
+
+() => state.current === null 
+  || state.current.violations.length === 0
+
+however at 00:04.704:
+
+extractors[0] = 
+  actionCoverage: 
+    delay: 3
+    fail-newest: 2
+    fail-oldest: 5
+    next: 5
+    refresh: 2
+    search-a: 3
+    search-all: 6
+    search-b: 4
+    success-newest: 1
+    success-oldest: 1
+  browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36
+  commands: 19
+  coverage: 
+    dialog_recovers: 0
+    dom_wiring: 0
+    no_duplicate_pending: 10
+    page_data_matches: 2
+    response_matches_pending: 9
+    stale_ignored: 8
+  firstViolationMessage: 29
+  messages: 29
+  model: 
+    activeId: 19
+    dialog: 
+      animation: 
+        id: request-error-panel
+        isShowing: false
+        transitionGeneration: 0
+        transitionState: Idle
+      id: request-error
+      isAnimated: false
+      isOpen: false
+      maybeFocusSelector: {}
+    page: 1
+    pending: 
+      - 
+        id: 9
+        page: 1
+        query: ""
+      - 
+        id: 11
+        page: 1
+        query: ""
+      - 
+        id: 12
+        page: 2
+        query: ""
+      - 
+        id: 13
+        page: 1
+        query: a
+      - 
+        id: 14
+        page: 1
+        query: ""
+      - 
+        id: 15
+        page: 1
+        query: b
+      - 
+        id: 16
+        page: 2
+        query: b
+      - 
+        id: 17
+        page: 1
+        query: a
+      - 
+        id: 18
+        page: 1
+        query: ""
+      - 
+        id: 19
+        page: 1
+        query: a
+    query: a
+    result: 
+      _tag: Success
+      data: 
+        items: 
+          - Amber lamp
+          - Birch chair
+          - Blue bowl
+        request: 
+          id: 8
+          page: 1
+          query: b
+        total: 4
+    sequence: 19
+  readyIds: 
+    - 9
+  semanticActions: 32
+  tags: 
+    ClickedPage: 5
+    ClickedRefresh: 2
+    FailedFetchPage: 7
+    SucceededFetchPage: 2
+    UpdatedQuery: 13
+  tick: 3
+  valid: 
+    - search-a
+    - search-b
+    - search-all
+    - refresh
+    - delay
+    - next
+    - success-oldest
+    - success-newest
+    - fail-oldest
+    - fail-newest
+  violations: 
+    - stale_ignored
+    - page_data_matches
+
+
+Reproduction finished, finding 1 violation!
+
+Inspect the test results using:
+
+  bombadil browser inspect measurements/2026-11-12-m1max/browser/discovery-direct-stale-1/replay-3
+
