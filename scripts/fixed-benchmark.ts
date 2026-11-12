@@ -1,3 +1,4 @@
+import { closeSync, openSync } from 'node:fs'
 import { mkdir, rm } from 'node:fs/promises'
 import { arch, platform } from 'node:os'
 import { resolve } from 'node:path'
@@ -23,10 +24,12 @@ try {
     await mkdir(dir, { recursive: true })
     const command = ['browser', 'test', 'http://127.0.0.1:4173/?mutant=clean', `spec/trace-${engine}.ts`, '--headless', '--time-limit', '30s', '--exit-on-violation', '--output-path', dir]
     const start = performance.now(), startedAt = Date.now()
-    const process = Bun.spawn([binary, ...command], { stdout: Bun.file(`${dir}/process.log`), stderr: Bun.file(`${dir}/process.log`) })
+    const logFd = openSync(`${dir}/process.log`, 'w')
+    const process = Bun.spawn([binary, ...command], { stdout: logFd, stderr: logFd })
     const timer = setTimeout(() => process.kill('SIGTERM'), 60000)
     const exit = await process.exited
     clearTimeout(timer)
+    closeSync(logFd)
     const elapsed = performance.now() - start
     const trace = await readTrace(`${dir}/trace.jsonl`)
     const snapshot = trace?.snapshot

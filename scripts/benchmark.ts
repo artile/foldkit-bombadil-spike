@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto'
+import { closeSync, openSync } from 'node:fs'
 import { copyFile, mkdir, rm } from 'node:fs/promises'
 import { arch, cpus, platform, release } from 'node:os'
 import { resolve } from 'node:path'
@@ -38,12 +39,12 @@ const waitReady = async () => {
 }
 const runProcess = async (args: Array<string>, log: string, timeout = 60000) => {
   const startedAt = Date.now(), start = performance.now()
-  const output = Bun.file(log)
-  const process = Bun.spawn(args, { stdout: output, stderr: output, env: { ...Bun.env, NO_COLOR: '1' } })
+  const logFd = openSync(log, 'w')
+  const process = Bun.spawn(args, { stdout: logFd, stderr: logFd, env: { ...Bun.env, NO_COLOR: '1' } })
   let timedOut = false
   const timer = setTimeout(() => { timedOut = true; process.kill('SIGTERM') }, timeout)
   try { const exit = await process.exited; return { exit, timed_out: timedOut, elapsed_ms: performance.now() - start, started_at_ms: startedAt } }
-  finally { clearTimeout(timer) }
+  finally { clearTimeout(timer); closeSync(logFd) }
 }
 const browserRun = async (engine: 'dom' | 'direct', mutant: Mutant, repeat: number, fixed = false) => {
   const id = `${fixed ? 'fixed' : 'discovery'}-${engine}-${mutant}-${repeat}`
