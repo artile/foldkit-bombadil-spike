@@ -1,5 +1,5 @@
 import { test } from 'bun:test'
-import { Command, click, expect, given, role, scene, text, type, label } from 'foldkit/scene'
+import { Command, click, expect, given, role, scene, text, type, label, Mount } from 'foldkit/scene'
 import { FetchPage } from './command'
 import { Message, getPage, initialModel } from './model'
 import { makeUpdate } from './update'
@@ -27,4 +27,20 @@ test('empty search results render an empty list', () => {
     type(label('Search catalogue'), 'xyz'),
     Command.resolve(FetchPage, Message.SucceededFetchPage({ request, page: getPage(request) })),
     expect(role('list')).toExist(), expect(role('listitem')).toBeAbsent())
+})
+
+test('controlled failure renders an alert and the error Dialog; dismiss restores idle', async () => {
+  const { Dialog } = await import('@foldkit/ui')
+  scene({ update: makeUpdate('clean'), view: makeView('clean') }, given(initialModel()),
+    type(label('Search catalogue'), 'a'),
+    Command.resolve(FetchPage, Message.FailedFetchPage({ request, error: 'Controlled failure' })),
+    Command.resolve(Dialog.ShowDialog, Dialog.Message.SucceededShowDialog()),
+    Mount.resolve(Dialog.AcquireResources, Dialog.Message.SucceededAcquireResources()),
+    expect(role('alert')).toExist(),
+    expect(role('heading', { name: 'Request failed' })).toExist(),
+    click(role('button', { name: 'Dismiss error' })),
+    Command.resolve(Dialog.CloseDialog, Dialog.Message.CompletedCloseDialog()),
+    Mount.expectEnded(Dialog.AcquireResources),
+    expect(role('alert')).toBeAbsent(),
+    expect(text('Choose a query or press Refresh.')).toExist())
 })
